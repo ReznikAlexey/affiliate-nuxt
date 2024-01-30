@@ -1,0 +1,125 @@
+html {
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  padding-top: env(safe-area-inset-top);
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  vertical-align: baseline;
+}
+*:focus {
+  outline: none;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: unset;
+}
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  object-fit: fill;
+  vertical-align: middle;
+}
+label {
+  display: block;
+  margin: 0;
+}
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+.page-content {
+  padding: size(40px) 0;
+}
+.main-title {
+  font-size: size(42px);
+  font-weight: 500;
+  line-height: 135%;
+}
+.main-title-m {
+  font-size: size(32px);
+  font-weight: 500;
+  line-height: 135%;
+}
+.current-offers {
+  margin-top: size(60px);
+  display: flex;
+  flex-direction: column;
+  row-gap: size(20px);
+}
+.swiper-wrapper {
+  position: relative;
+  .v1-swiper-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: size(50px);
+    height: size(50px);
+    background: $lightGrey;
+    border-radius: 50%;
+    top: 40%;
+    .icon {
+      width: size(10px);
+      height: size(20px);
+      mask: url("@/assets/images/svg/arr-right.svg") center / contain no-repeat ;
+      -webkit-mask: url("@/assets/images/svg/arr-right.svg") center / contain no-repeat ;
+      background-color: $grey;
+    }
+    &::after {
+      content: none;
+    }
+    &.swiper-button-next {
+      right: size(-20px);
+      transform: translateX(100%);
+    }
+    &.swiper-button-prev {
+      left: size(-20px);
+      transform: translateX(-100%) rotate(180deg);
+    }
+  }
+  .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+    opacity: 0.7;
+  }
+}
+
+
+

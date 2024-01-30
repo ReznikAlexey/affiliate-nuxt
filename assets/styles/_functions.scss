@@ -1,0 +1,7 @@
+//variables
+$fz-default: 16px;
+
+//functions
+@function size($size-in-px) {
+  @return calc($size-in-px / $fz-default * 1rem);
+}
