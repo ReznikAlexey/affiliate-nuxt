@@ -70,6 +70,7 @@ input, button, select, optgroup, textarea {
 .page-content {
   padding: size(40px) 0;
 }
+
 .main-title {
   font-size: size(42px);
   font-weight: 500;
@@ -80,13 +81,20 @@ input, button, select, optgroup, textarea {
   font-weight: 500;
   line-height: 135%;
 }
+.af-text-m {
+  font-size: size(14px);
+  font-weight: 500;
+  line-height: 135%;
+  color: white;
+}
+
 .current-offers {
   margin-top: size(60px);
   display: flex;
   flex-direction: column;
   row-gap: size(20px);
 }
-.swiper-wrapper {
+.main-swiper-wrapper {
   position: relative;
   .v1-swiper-button {
     display: flex;
@@ -119,6 +127,57 @@ input, button, select, optgroup, textarea {
   .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
     opacity: 0.7;
   }
+}
+.offers {
+  margin-top: size(40px);
+}
+.main-row-2 {
+  margin-top: size(20px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: size(30px);
+  .offers__card-item {
+    width: calc(50% - size(30px) / 2);
+  }
+}
+.offers__card-item {
+  border-radius: size(10px);
+  overflow: hidden;
+}
+.offers__card {
+  padding-top: 55%;
+  position: relative;
+  display: block;
+  background-color: $lightGrey;
+  width: 100%;
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:hover {
+    .offers__card-info {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+.offers__card-info {
+  padding: size(30px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #09090B;
+  transform: translate3d(0, 100%, 0);
+  border-radius: 13px;
+  transition: transform .5s;
 }
 
 

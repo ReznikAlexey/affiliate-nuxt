@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: {enabled: false},
-  modules: ['nuxt-swiper', '@nuxtjs/device'],
+  modules: ['nuxt-swiper', '@nuxtjs/device', '@nuxt/ui', '@nuxtjs/i18n',],
   css: ['@/assets/styles/styles.scss'],
   vite: {
     css: {
@@ -13,12 +13,31 @@ export default defineNuxtConfig({
     },
   },
   components: [
-    { path: '~/components/sliders', pathPrefix: false },
+    {path: '~/components/sliders', pathPrefix: false},
     '~/components'
   ],
   swiper: {
     prefix: 'Swiper',
     styleLang: 'css',
     modules: ['navigation'],
-  }
+  },
+  colorMode: {
+    preference: 'light'
+  },
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'English'
+      },
+      {
+        code: 'es',
+        name: 'Español'
+      },
+      {
+        code: 'fr',
+        name: 'Français'
+      }
+    ]
+  },
 })
