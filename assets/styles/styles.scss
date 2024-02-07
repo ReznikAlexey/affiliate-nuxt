@@ -27,7 +27,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-style: normal;
   vertical-align: baseline;
 }
@@ -41,6 +41,10 @@ a {
 }
 li {
   list-style-type: none; /* Убираем маркеры */
+}
+ol {
+  list-style: none;
+  counter-reset: item;
 }
 ul {
   margin: 0;
@@ -59,6 +63,14 @@ input, button, select, optgroup, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 .container {
   margin-right: auto;
@@ -81,11 +93,15 @@ input, button, select, optgroup, textarea {
   font-weight: 500;
   line-height: 135%;
 }
+.main-title-s {
+  font-size: size(22px);
+  font-weight: 500;
+  line-height: 135%;
+}
 .af-text-m {
   font-size: size(14px);
   font-weight: 500;
   line-height: 135%;
-  color: white;
 }
 
 .current-offers {
@@ -178,6 +194,56 @@ input, button, select, optgroup, textarea {
   transform: translate3d(0, 100%, 0);
   border-radius: 13px;
   transition: transform .5s;
+  .af-text-m {
+    color: #fff;
+  }
+}
+.points-content {
+  margin-top: size(40px);
+  display: flex;
+  flex-direction: column;
+  row-gap: size(20px);
+}
+.points-content__footer {
+  display: flex;
+  column-gap: size(30px);
+  max-width: size(650px);
+}
+.af-ol-item {
+  counter-increment: item;
+  font-size: size(14px);
+  & + & {
+    margin-top: size(8px);
+  }
+  &:before {
+    margin-right: 10px;
+    content: counter(item);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: $brown;
+    border: 1px solid $brown;
+    width: size(20px);
+    height: size(20px);
+    font-size: size(12px);
+  }
+}
+.af-offer-text {
+  margin-top: size(40px);
+  max-width: size(600px);
+}
+.other-offers {
+  margin-top: size(40px);
+  display: flex;
+  flex-direction: column;
+  row-gap: size(20px);
+}
+.card-auth {
+
+}
+.card-auth-content {
+  padding: size(20px) size(15px);
 }
 
 

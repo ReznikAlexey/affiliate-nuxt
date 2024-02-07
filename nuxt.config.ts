@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   devtools: {enabled: false},
   modules: ['nuxt-swiper', '@nuxtjs/device', '@nuxt/ui', '@nuxtjs/i18n',],
-  css: ['@/assets/styles/styles.scss'],
+  css: [
+    '@/assets/styles/styles.scss',
+    "@/assets/fonts/stylesheet.css"
+  ],
   vite: {
     css: {
       preprocessorOptions: {
@@ -14,6 +17,7 @@ export default defineNuxtConfig({
   },
   components: [
     {path: '~/components/sliders', pathPrefix: false},
+    {path: '~/components/buttons', pathPrefix: false},
     '~/components'
   ],
   swiper: {
