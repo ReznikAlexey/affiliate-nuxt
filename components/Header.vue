@@ -22,10 +22,10 @@
         </div>
         <div class="header-right">
           <USelectMenu
-              v-model="activeLanguages"
+              v-model="$i18n.locale"
               :options="languages"
-              placeholder="Select people"
-              value-attribute="id"
+              placeholder="Выберите язык"
+              value-attribute="value"
               option-attribute="name"
           />
 
@@ -39,27 +39,17 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
-
 const languages = [{
-  id: 1,
-  name: 'Рус'
+  name: 'Рус',
+  value: 'ru'
 }, {
-  id: 2,
-  name: 'Каз'
+  name: 'Каз',
+  value: 'kz'
 }, {
-  id: 3,
-  name: 'Англ'
+  name: 'Англ',
+  value: 'en'
 }]
-const activeLanguages = ref(languages[0].id)
 
-
-const { locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
-
-const availableLocales = computed(() => {
-  return (locales.value).filter(i => i.code !== locale.value)
-})
 </script>
 
 <style lang="scss">

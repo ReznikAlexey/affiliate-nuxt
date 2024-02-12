@@ -1,4 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
+import { resolve, dirname } from 'node:path'
+import { fileURLToPath } from 'url'
+
 export default defineNuxtConfig({
   devtools: {enabled: false},
   ssr: true,
@@ -7,7 +10,10 @@ export default defineNuxtConfig({
       failOnError: false,
     }
   },
-  modules: ['nuxt-swiper', '@nuxtjs/device', '@nuxt/ui', '@nuxtjs/i18n',],
+  build: {
+    transpile: [/vue-i18n/]
+  },
+  modules: ['nuxt-swiper', '@nuxtjs/device', '@nuxt/ui'],
   css: [
     '@/assets/styles/styles.scss',
     "@/assets/fonts/stylesheet.css"
@@ -20,6 +26,18 @@ export default defineNuxtConfig({
         }
       },
     },
+    resolve: {
+      alias: {
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js'
+      }
+    },
+    plugins: [
+      VueI18nVitePlugin({
+        include: [
+          resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json')
+        ]
+      })
+    ]
   },
   components: [
     {path: '~/components/sliders', pathPrefix: false},
@@ -33,21 +51,5 @@ export default defineNuxtConfig({
   },
   colorMode: {
     preference: 'light'
-  },
-  i18n: {
-    locales: [
-      {
-        code: 'en',
-        name: 'English'
-      },
-      {
-        code: 'es',
-        name: 'Español'
-      },
-      {
-        code: 'fr',
-        name: 'Français'
-      }
-    ]
   },
 })
