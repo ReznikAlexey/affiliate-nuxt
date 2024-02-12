@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: {enabled: false},
+  ssr: true,
+  nitro: {
+    prerender: {
+      failOnError: false,
+    }
+  },
   modules: ['nuxt-swiper', '@nuxtjs/device', '@nuxt/ui', '@nuxtjs/i18n',],
   css: [
     '@/assets/styles/styles.scss',
