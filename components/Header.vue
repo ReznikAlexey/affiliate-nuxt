@@ -27,11 +27,10 @@
               placeholder="Выберите язык"
               value-attribute="value"
               option-attribute="name"
+              selectClass="lang-select"
+              class="lang-select-wrapper"
+              selected-icon="none"
           />
-
-<!--          <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{-->
-<!--              locale.name-->
-<!--            }}</NuxtLink>-->
         </div>
       </div>
     </div>
@@ -40,13 +39,13 @@
 
 <script setup>
 const languages = [{
-  name: 'Рус',
+  name: 'Русский',
   value: 'ru'
 }, {
-  name: 'Каз',
+  name: 'Казахский',
   value: 'kz'
 }, {
-  name: 'Англ',
+  name: 'Английский',
   value: 'en'
 }]
 
@@ -55,7 +54,8 @@ const languages = [{
 <style lang="scss">
 .header {
   padding: size(15px) 0;
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $lightGrey;
+  box-shadow: 0 4px 8px 0 rgba(28, 43, 79, 0.08);
 }
 .header-content {
   display: flex;
@@ -80,8 +80,10 @@ const languages = [{
   object-fit: contain;
 }
 .nav-link {
-  padding: 0 size(10px);
+  padding: 0 size(24px);
   font-size: size(14px);
-  color: $darkGrey;
+  color: $darkBlue;
+  font-style: normal;
+  font-weight: 700;
 }
 </style>

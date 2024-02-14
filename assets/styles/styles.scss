@@ -118,7 +118,7 @@ input[type=number] {
     justify-content: center;
     width: size(50px);
     height: size(50px);
-    background: $lightGrey;
+    //background: $lightGrey;
     border-radius: 50%;
     top: 40%;
     .icon {
@@ -126,7 +126,7 @@ input[type=number] {
       height: size(20px);
       mask: url("@/assets/images/svg/arr-right.svg") center / contain no-repeat ;
       -webkit-mask: url("@/assets/images/svg/arr-right.svg") center / contain no-repeat ;
-      background-color: $grey;
+      background-color: $darkBlue;
     }
     &::after {
       content: none;
@@ -239,11 +239,58 @@ input[type=number] {
   flex-direction: column;
   row-gap: size(20px);
 }
-.card-auth {
-
+.card-auth-modal {
+  .sm\:max-w-lg {
+    max-width: size(400px);
+  }
+  .af-button {
+    margin: 0 auto;
+    max-width: 80%;
+  }
 }
 .card-auth-content {
   padding: size(20px) size(15px);
+}
+.af-input {
+  input {
+    border: 1px solid #667085;
+    box-shadow: none;
+    &:focus {
+      box-shadow: none;
+      border-color: #667085;
+    }
+  }
+}
+.lang-select {
+  background-color: #F5F5F5;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  &:focus {
+    box-shadow: none;
+  }
+  &::before {
+    content: '';
+    width: size(20px);
+    height: size(20px);
+    background: url("../images/svg/ic-globe.svg") center / contain no-repeat;
+  }
+  .block {
+    color: $darkBlue;
+    font-size: size(14px);
+    font-style: normal;
+    font-weight: 500;
+  }
+  .i-heroicons-chevron-down-20-solid {
+    transition: .2s;
+  }
+}
+.lang-select-wrapper {
+  &[data-headlessui-state="open"] {
+    .i-heroicons-chevron-down-20-solid {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 
