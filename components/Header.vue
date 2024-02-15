@@ -52,39 +52,49 @@
       v-model="isBurgerOpen"
       :overlay="false"
   >
-    <div class="burger-content">
-      <div class="container">
-        <div class="burger-top">
-          <div class="header-left">
-            <router-link to="/">
-              <div class="logo-wrapper">
-                <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/B%C3%94N_Logo_PNG.png"
-                     alt="logo">
-              </div>
-            </router-link>
-          </div>
-          <div class="header-right">
-            <UButton
-                :padded="false"
-                variant="link"
-                icon="i-heroicons-x-mark"
-                class="burger-btn"
-                @click="isBurgerOpen = false"
-            />
-          </div>
+    <div class="burger-content container">
+      <div class="burger-top">
+        <div class="header-left">
+          <router-link to="/">
+            <div class="logo-wrapper">
+              <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/B%C3%94N_Logo_PNG.png"
+                   alt="logo">
+            </div>
+          </router-link>
         </div>
-        <div class="burger-body">
-          <nav class="burger-nav">
-            <ul class="nav-list">
-              <li class="nav-item">
-                <router-link class="nav-link" to="/">Предложение</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/">Информация</router-link>
-              </li>
-            </ul>
-          </nav>
+        <div class="header-right">
+          <UButton
+              :padded="false"
+              variant="link"
+              icon="i-heroicons-x-mark"
+              class="burger-btn"
+              @click="isBurgerOpen = false"
+          />
         </div>
+      </div>
+      <div class="burger-body">
+        <nav class="burger-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <router-link class="nav-link" to="/">Предложение</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/">Информация</router-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="burger-footer">
+        <USelectMenu
+            v-model="$i18n.locale"
+            :options="languages"
+            placeholder="Выберите язык"
+            value-attribute="value"
+            option-attribute="name"
+            selectClass="lang-select"
+            class="lang-select-wrapper"
+            selected-icon="none"
+        />
       </div>
     </div>
   </USlideover>
@@ -146,7 +156,14 @@ const languages = [{
     padding: size(10px) 0;
   }
   .burger-content {
-    padding: size(10px) 0;
+    padding-top: size(10px);
+    padding-bottom: size(10px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .burger-body {
+    flex-grow: 1;
   }
   .burger-top {
     display: flex;

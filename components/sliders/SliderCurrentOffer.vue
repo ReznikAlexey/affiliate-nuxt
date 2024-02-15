@@ -29,6 +29,7 @@
           :red-text=slide.bonus
           :main-text=slide.type
           :sub-text=slide.text
+          @click="navigateTo('/offer/1')"
       ></CardCurrentOffer>
     </SwiperSlide>
   </Swiper>
@@ -38,10 +39,14 @@
   <div class="swiper-button-next v1-swiper-button">
     <div class="icon"></div>
   </div>
-  <div class="swiper-pagination v1-swiper-pagination"></div>
+  <div
+      v-if="!$device.isDesktop"
+      class="swiper-pagination v1-swiper-pagination"
+  ></div>
 </template>
 
 <script setup>
+import {navigateTo} from "nuxt/app";
 
 const currentOffers = [
   {

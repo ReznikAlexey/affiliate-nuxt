@@ -28,6 +28,7 @@ defineProps({
   row-gap: size(6px);
   border-radius: size(8px);
   border: 1px solid $lightGrey;
+  cursor: pointer;
 }
 .card-image-wrapper {
   background-color: $lightGrey;
