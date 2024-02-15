@@ -9,7 +9,10 @@
                    alt="logo">
             </div>
           </router-link>
-          <nav class="header-nav">
+          <nav
+              v-if="$device.isDesktop"
+              class="header-nav"
+          >
             <ul class="nav-list">
               <li class="nav-item">
                 <router-link class="nav-link" to="/">Предложение</router-link>
@@ -22,6 +25,7 @@
         </div>
         <div class="header-right">
           <USelectMenu
+              v-if="$device.isDesktop"
               v-model="$i18n.locale"
               :options="languages"
               placeholder="Выберите язык"
@@ -31,13 +35,63 @@
               class="lang-select-wrapper"
               selected-icon="none"
           />
+          <UButton
+              v-if="!$device.isDesktop"
+              :padded="false"
+              variant="link"
+              icon="i-heroicons-bars-3"
+              class="burger-btn"
+              @click="isBurgerOpen = true"
+          />
         </div>
       </div>
     </div>
   </header>
+
+  <USlideover
+      v-model="isBurgerOpen"
+      :overlay="false"
+  >
+    <div class="burger-content">
+      <div class="container">
+        <div class="burger-top">
+          <div class="header-left">
+            <router-link to="/">
+              <div class="logo-wrapper">
+                <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/B%C3%94N_Logo_PNG.png"
+                     alt="logo">
+              </div>
+            </router-link>
+          </div>
+          <div class="header-right">
+            <UButton
+                :padded="false"
+                variant="link"
+                icon="i-heroicons-x-mark"
+                class="burger-btn"
+                @click="isBurgerOpen = false"
+            />
+          </div>
+        </div>
+        <div class="burger-body">
+          <nav class="burger-nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <router-link class="nav-link" to="/">Предложение</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/">Информация</router-link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </USlideover>
 </template>
 
 <script setup>
+const isBurgerOpen = ref(false)
 const languages = [{
   name: 'Русский',
   value: 'ru'
@@ -85,5 +139,28 @@ const languages = [{
   color: $darkBlue;
   font-style: normal;
   font-weight: 700;
+}
+
+.mobile-ver {
+  .header {
+    padding: size(10px) 0;
+  }
+  .burger-content {
+    padding: size(10px) 0;
+  }
+  .burger-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-list {
+    margin-top: size(40px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: size(20px);
+  }
+  .nav-link {
+    font-size: size(20px);
+  }
 }
 </style>

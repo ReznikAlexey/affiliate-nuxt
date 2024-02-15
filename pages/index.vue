@@ -8,7 +8,7 @@
           <SliderCurrentOffer></SliderCurrentOffer>
         </div>
         <div class="offers">
-          <h3 class="main-title-m">Текущие предложения</h3>
+          <h3 class="main-title-m">Предложения от Технодом</h3>
           <ul class="main-row-2">
             <li
                 v-for="offer in offers"

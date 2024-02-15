@@ -1,11 +1,7 @@
 <template>
   <div>
-    <Header
-        v-if="$device.isDesktop"
-    ></Header>
+    <Header></Header>
     <slot/>
-    <!--    <Menu></Menu>-->
-
   </div>
 </template>
 

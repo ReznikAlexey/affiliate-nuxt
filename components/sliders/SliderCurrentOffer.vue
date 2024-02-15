@@ -1,24 +1,35 @@
 <template>
   <Swiper
       class="current-offers-swiper"
-      :slides-per-view="4"
-      :space-between="30"
+      slides-per-view="1"
+      space-between="30"
+      :modules="[SwiperNavigation, SwiperPagination]"
+      :breakpoints="{
+          768:{
+            slidesPerView: 2
+            },
+          991:{
+            slidesPerView:4,
+            }
+        }"
+      :navigation="{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }"
+      :pagination="{
+        el: '.swiper-pagination'
+      }"
   >
     <SwiperSlide
         v-for="slide in currentOffers"
         :key="slide"
-        :modules="[SwiperNavigation]"
-        :navigation= "{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }"
     >
-    <CardCurrentOffer
-        :image=slide.img
-        :red-text=slide.bonus
-        :main-text=slide.type
-        :sub-text=slide.text
-    ></CardCurrentOffer>
+      <CardCurrentOffer
+          :image=slide.img
+          :red-text=slide.bonus
+          :main-text=slide.type
+          :sub-text=slide.text
+      ></CardCurrentOffer>
     </SwiperSlide>
   </Swiper>
   <div class="swiper-button-prev v1-swiper-button">
@@ -27,6 +38,7 @@
   <div class="swiper-button-next v1-swiper-button">
     <div class="icon"></div>
   </div>
+  <div class="swiper-pagination v1-swiper-pagination"></div>
 </template>
 
 <script setup>
