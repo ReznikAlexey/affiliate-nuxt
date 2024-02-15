@@ -44,11 +44,11 @@ export default defineNuxtConfig({
     {path: '~/components/buttons', pathPrefix: false},
     '~/components'
   ],
-  swiper: {
-    prefix: 'Swiper',
-    styleLang: 'css',
-    modules: ['navigation'],
-  },
+  // swiper: {
+  //   prefix: 'Swiper',
+  //   styleLang: 'css',
+  //   modules: ['navigation'],
+  // },
   colorMode: {
     preference: 'light'
   },
