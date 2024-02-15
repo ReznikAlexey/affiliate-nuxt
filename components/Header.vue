@@ -28,7 +28,7 @@
               v-if="$device.isDesktop"
               v-model="$i18n.locale"
               :options="languages"
-              placeholder="Выберите язык"
+              :placeholder="$t('main.selectLanguage')"
               value-attribute="value"
               option-attribute="name"
               selectClass="lang-select"
@@ -76,10 +76,10 @@
         <nav class="burger-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <router-link class="nav-link" to="/">Предложение</router-link>
+              <router-link class="nav-link" to="/">{{ $t("main.offer")</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/">Информация</router-link>
+              <router-link class="nav-link" to="/">{{ $t("main.info")</router-link>
             </li>
           </ul>
         </nav>
@@ -88,7 +88,7 @@
         <USelectMenu
             v-model="$i18n.locale"
             :options="languages"
-            placeholder="Выберите язык"
+            :placeholder="$t('main.selectLanguage')"
             value-attribute="value"
             option-attribute="name"
             selectClass="lang-select"
@@ -109,7 +109,7 @@ const languages = [{
   name: 'Казахский',
   value: 'kz'
 }, {
-  name: 'Английский',
+  name: 'English',
   value: 'en'
 }]
 
