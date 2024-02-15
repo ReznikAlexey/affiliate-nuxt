@@ -1,3 +1,15 @@
 {
-  "hello": "Hello, World!"
+  "main" : {
+    "title" : "Marketplace",
+    "currentOffer": "Current Offer",
+    "offer": "Offers",
+    "info": "Information",
+    "offerFrom": "Offers from Technodom"
+  },
+  "card": {
+    "anotherOffer": "Another offer",
+    "cardNumber": "Write card number",
+    "cardAuth": "Card authorization",
+    "goToShop": "Go to shop"
+  }
 }

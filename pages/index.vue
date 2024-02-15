@@ -1,14 +1,14 @@
 <template>
   <div class="page-content af-home">
     <div class="container">
-      <h1 class="main-title">Маркетплейс {{ $t('hello') }}</h1>
+      <h1 class="main-title"> {{$t("main.title") }}</h1>
       <div class="current-offers">
-        <h3 class="main-title-m">Текущие предложения</h3>
+        <h3 class="main-title-m">{{$t("main.currentOffer")}}</h3>
         <div class="main-swiper-wrapper">
           <SliderCurrentOffer></SliderCurrentOffer>
         </div>
         <div class="offers">
-          <h3 class="main-title-m">Предложения от Технодом</h3>
+          <h3 class="main-title-m"> {{$t("main.offerFrom")}}</h3>
           <ul class="main-row-2">
             <li
                 v-for="offer in offers"

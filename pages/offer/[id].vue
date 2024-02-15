@@ -19,17 +19,17 @@
         </ol>
         <div class="points-content__footer">
           <MainButton
-              text="ВНЕСТИ НОМЕР КАРТЫ"
+              :text="$t('card.cardNumber')"
               @click="cardAuthorizationModal = true"
           ></MainButton>
           <MainButton
-              text="ПЕРЕЙТЕ В МАГАЗИН ПАРТНЕРА"
+              :text="$t('card.goToShop')"
           ></MainButton>
         </div>
       </div>
 
       <div class="other-offers">
-        <h3 class="main-title-s">Другие предложения</h3>
+        <h3 class="main-title-s">{{$t('card.anotherOffer')}}</h3>
         <div class="main-swiper-wrapper">
           <SliderCurrentOffer></SliderCurrentOffer>
         </div>
@@ -53,14 +53,14 @@
         >
           <UInput
               v-model="state.number"
-              placeholder="Введите номер карты"
+              :placeholder="$t('card.cardNumber')"
               type="number"
           />
         </UFormGroup>
 
         <MainButton
             type="submit"
-            text="авторизовать карту"
+            :text="$t('card.cardAuth')"
         ></MainButton>
       </UForm>
     </div>
