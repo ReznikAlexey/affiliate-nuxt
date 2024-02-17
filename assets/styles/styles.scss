@@ -210,6 +210,8 @@ input[type=number] {
   max-width: size(650px);
 }
 .af-ol-item {
+  display: flex;
+  align-items: center;
   counter-increment: item;
   font-size: size(14px);
   & + & {
@@ -363,6 +365,23 @@ input[type=number] {
   }
   .offers {
     margin-top: size(22px);
+  }
+  .af-offer-text {
+    margin-top: size(24px);
+  }
+  .points-content {
+    margin-top: size(24px);
+    row-gap: size(18px);
+  }
+  .main-title-s {
+    font-size: size(18px);
+  }
+  .af-ol-item {
+    font-size: size(12px);
+  }
+  .other-offers {
+    margin-top: size(24px);
+    row-gap: size(18px);
   }
 }
 

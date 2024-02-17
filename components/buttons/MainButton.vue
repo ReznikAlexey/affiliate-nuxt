@@ -20,5 +20,13 @@ defineProps({
   color: #fff;
   border: none;
   outline: none;
+  font-size: size(14px);
+}
+.mobile-ver {
+  .af-button {
+    height: size(34px);
+    border-radius: size(4px);
+    font-size: size(12px);
+  }
 }
 </style>
