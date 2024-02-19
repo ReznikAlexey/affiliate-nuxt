@@ -1,7 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,17 +10,19 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/device": "^3.1.1",
     "@intlify/unplugin-vue-i18n": "^1.0.1",
-    "vue-i18n": "^9.3.0",
+    "@nuxtjs/device": "^3.1.1",
     "nuxt": "^3.9.3",
     "vue": "^3.4.14",
+    "vue-i18n": "^9.3.0",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@nuxt/ui": "^2.13.0",
+    "@pinia/nuxt": "^0.5.1",
     "dotenv": "^16.4.2",
     "nuxt-swiper": "^1.2.2",
+    "pinia": "^2.1.7",
     "sass": "^1.70.0"
   }
 }

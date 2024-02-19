@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   build: {
     transpile: [/vue-i18n/]
   },
-  modules: ['nuxt-swiper', '@nuxtjs/device', '@nuxt/ui'],
+  modules: [['@pinia/nuxt', { autoImports: ['defineStore'] }], 'nuxt-swiper', '@nuxtjs/device', '@nuxt/ui'],
   css: [
     '@/assets/styles/styles.scss',
     "@/assets/fonts/stylesheet.css"
