@@ -103,6 +103,17 @@ input[type=number] {
   font-weight: 500;
   line-height: 135%;
 }
+.af-text-m-grey {
+  font-size: size(12px);
+  font-weight: 500;
+  line-height: 135%;
+}
+.tooltip-text-reset {
+  overflow: unset;
+  text-overflow: unset;
+  white-space: unset;
+  height: unset;
+}
 
 .current-offers {
   margin-top: size(60px);
@@ -293,6 +304,9 @@ input[type=number] {
       transform: rotate(180deg);
     }
   }
+}
+.tooltip-wrapper {
+  width: 100%;
 }
 
 .mobile-ver {

@@ -22,7 +22,19 @@
               :text="$t('card.cardNumber')"
               @click="cardAuthorizationModal = true"
           ></MainButton>
+          <UTooltip
+              v-if="!isUserCardAuth"
+              text="Внесите номер карты"
+              class="tooltip-wrapper"
+          >
+            <MainButton
+                :text="$t('card.goToShop')"
+                link=""
+                :class="{disabled: !isUserCardAuth}"
+            ></MainButton>
+          </UTooltip>
           <MainButton
+              v-else
               :text="$t('card.goToShop')"
               link=""
               :class="{disabled: !isUserCardAuth}"
@@ -45,10 +57,13 @@
   >
     <UCard :ui="{
       body: {
-        padding: 'px-2 py-2 sm:p-2 sm:px-4 sm:pb-4',
+        padding: 'px-2 py-2 sm:p-2 sm:px-4 sm:pb-2',
       },
       header: {
         padding: 'px-2 py-2 sm:p-2 sm:px-4 sm:pt-4',
+      },
+      footer: {
+        padding: 'px-2 py-2 sm:p-2 sm:px-4 sm:pb-4',
       },
   }">
       <template #header>
@@ -83,6 +98,17 @@
           ></MainButton>
         </UForm>
       </div>
+      <template #footer>
+        <div class="flex items-center justify-end">
+
+          <UTooltip
+              :ui="{base: 'tooltip-text-reset'}"
+              text="На лицевой стороне вашей кредитной или дебетовой карты. Номер обычно находится в нижней части карты и состоит из 16 цифр"
+          >
+            <p class="af-text-m-grey">Где найти номер карты?</p>
+          </UTooltip>
+        </div>
+      </template>
     </UCard>
 
   </UModal>
