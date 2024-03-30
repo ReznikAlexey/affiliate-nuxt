@@ -3,12 +3,8 @@
     <div class="container">
       <h1 class="main-title"> {{$t("main.title") }}</h1>
       <div class="current-offers">
-        <h3 class="main-title-m">{{$t("main.currentOffer")}}</h3>
-        <div class="main-swiper-wrapper">
-          <SliderCurrentOffer></SliderCurrentOffer>
-        </div>
         <div class="offers">
-          <h3 class="main-title-m"> {{$t("main.offerFrom")}}</h3>
+<!--          <h3 class="main-title-m"> {{$t("main.offerFrom")}}</h3>-->
           <ul class="main-row-2">
             <li
                 v-for="offer in offers"
@@ -23,11 +19,15 @@
                     alt="offer"
                 >
                 <div class="offers__card-info">
-                  <p class="af-text-m">{{ offer.text }}</p>
+                  <p class="af-text-m">{{ $t(offer.text) }}</p>
                 </div>
               </a>
             </li>
           </ul>
+        </div>
+        <h3 class="main-title-m">{{ $t("main.currentOffer") }}</h3>
+        <div class="main-swiper-wrapper">
+          <SliderCurrentOffer></SliderCurrentOffer>
         </div>
       </div>
     </div>
@@ -38,12 +38,12 @@
 
 const offers = [
   {
-    image: 'https://www.cnet.com/a/img/resize/0302d07e10ba8dc211f7b4e25891ad46dda31976/hub/2023/02/05/f52fdc98-dafc-4d05-b20e-8bd936b49a53/oneplus-11-review-cnet-lanxon-promo-8.jpg?auto=webp&fit=crop&height=675&width=1200',
-    text: 'Руслан Закиров переработал и обновил меню Del Papa. Многие блюда обрели совершенно иной вкус и теперь наши гости могут познакомиться с итальянской кухней по-новому'
+    image: '/_nuxt/assets/images/big-banner-1.png',
+    text: 'bannerText.bigBanner1'
   },
   {
-    image: 'https://www.gizchina.com/wp-content/uploads/images/2023/09/Samusung-EcoSystem.jpg',
-    text: 'Многие блюда обрели совершенно иной вкус и теперь наши гости могут познакомиться с итальянской кухней по-новому'
+    image: '/_nuxt/assets/images/big-banner-2.png',
+    text: 'bannerText.bigBanner2'
   }
 ]
 

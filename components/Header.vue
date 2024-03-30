@@ -5,7 +5,7 @@
         <div class="header-left">
           <router-link to="/">
             <div class="logo-wrapper">
-              <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/B%C3%94N_Logo_PNG.png"
+              <img class="logo-img" src="assets/images/logo.png"
                    alt="logo">
             </div>
           </router-link>
@@ -15,10 +15,10 @@
           >
             <ul class="nav-list">
               <li class="nav-item">
-                <router-link class="nav-link" to="/">{{$t("main.offer")}}</router-link>
+                <router-link class="nav-link" to="/">{{ $t("main.offer") }}</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link" to="/">{{$t("main.info")}}</router-link>
+                <router-link class="nav-link" to="/">{{ $t("main.info") }}</router-link>
               </li>
             </ul>
           </nav>
@@ -57,7 +57,7 @@
         <div class="header-left">
           <router-link to="/">
             <div class="logo-wrapper">
-              <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/B%C3%94N_Logo_PNG.png"
+              <img class="logo-img" src="assets/images/logo.png"
                    alt="logo">
             </div>
           </router-link>
@@ -76,10 +76,10 @@
         <nav class="burger-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <router-link class="nav-link" to="/">{{$t("main.offer")}}</router-link>
+              <router-link class="nav-link" to="/">{{ $t("main.offer") }}</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/">{{$t("main.info")}}</router-link>
+              <router-link class="nav-link" to="/">{{ $t("main.info") }}</router-link>
             </li>
           </ul>
         </nav>
@@ -127,8 +127,10 @@ const languages = [{
   justify-content: space-between;
 }
 .nav-list {
+  margin: 0 size(12px);
   display: flex;
   align-items: center;
+  column-gap: size(24px);
 }
 .header-left {
   display: flex;
@@ -139,18 +141,21 @@ const languages = [{
 }
 .logo-img {
   display: block;
-  width: size(100px);
-  height: size(40px);
+  width: size(178px);
+  height: size(32px);
   object-fit: contain;
 }
 .nav-link {
-  padding: 0 size(24px);
+  padding: 0 size(12px);
   font-size: size(14px);
   color: $darkBlue;
   font-style: normal;
   font-weight: 700;
+  transition: color .2s;
+  &:hover {
+    color: #495a93;
+  }
 }
-
 .mobile-ver {
   .header {
     padding: size(10px) 0;

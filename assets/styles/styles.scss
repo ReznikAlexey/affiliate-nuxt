@@ -80,7 +80,7 @@ input[type=number] {
   max-width: 1200px;
 }
 .page-content {
-  padding: size(40px) 0;
+  padding: size(50px) 0;
 }
 
 .main-title {
@@ -120,6 +120,9 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   row-gap: size(20px);
+  .main-title-m {
+    margin-top: size(20px);
+  }
 }
 .main-swiper-wrapper {
   position: relative;
@@ -156,10 +159,10 @@ input[type=number] {
   }
 }
 .offers {
-  margin-top: size(40px);
+  //margin-top: size(40px);
 }
 .main-row-2 {
-  margin-top: size(20px);
+  //margin-top: size(20px);
   display: flex;
   flex-wrap: wrap;
   gap: size(30px);

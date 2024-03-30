@@ -1,9 +1,9 @@
 {
   "main" : {
-    "title" : "Marketplace",
+    "title" : "Nomad Club online shop",
     "currentOffer": "Current Offer",
-    "offer": "Offers",
-    "info": "Information",
+    "offer": "Our offers",
+    "info": "Terms & conditions",
     "offerFrom": "Offers from Technodom",
     "selectLanguage": "Select language"
   },
@@ -12,5 +12,9 @@
     "cardNumber": "Write card number",
     "cardAuth": "Card authorization",
     "goToShop": "Go to shop"
+  },
+  "bannerText": {
+    "bigBanner1": "Shop online exclusive colours of Galaxy S24 Ultra available only at samsung.kz and collect extra 500 Nomad Club points.",
+    "bigBanner2": "Start your everyday wellness journey with Galaxy Watch6 and gain 300 extra Nomad club points."
   }
 }
