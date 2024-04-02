@@ -4,6 +4,14 @@ import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
   devtools: {enabled: false},
+  app: {
+    head: {
+      title: "Nomad Club",
+      link: [{
+        rel: "icon", type: "image/png", href: "/favicon.ico"
+      }]
+    }
+  },
   ssr: true,
   nitro: {
     prerender: {
@@ -39,6 +47,7 @@ export default defineNuxtConfig({
       })
     ]
   },
+  spaLoadingTemplate: false,
   components: [
     {path: '~/components/sliders', pathPrefix: false},
     {path: '~/components/buttons', pathPrefix: false},
