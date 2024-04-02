@@ -1,4 +1,4 @@
-import offersData from '@/mocks/offersData';
+import offersData from '../mocks/offersData.json'
 
 export function fetchOffersData() {
   return new Promise((resolve, reject) => {
