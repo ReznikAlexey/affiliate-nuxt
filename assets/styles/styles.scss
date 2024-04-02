@@ -173,6 +173,7 @@ input[type=number] {
 .offers__card-item {
   border-radius: size(10px);
   overflow: hidden;
+  cursor: pointer;
 }
 .offers__card {
   padding-top: 55%;

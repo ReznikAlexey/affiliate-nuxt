@@ -6,16 +6,18 @@
         <div class="offers">
           <ul class="main-row-2">
             <li
-                v-for="offer in offers"
+                v-for="offer in bannerOffers"
                 :key="offer.id"
                 class="offers__card-item"
+                @click="openDetailPage(offer, 'offer')"
             >
-              <a href="#" class="offers__card">
+              <div class="offers__card">
+                {{offer.image}}
                 <img :src="offer.image" alt="offer">
                 <div class="offers__card-info">
-                  <p class="af-text-m">{{ $t(offer.text) }}</p>
+                  <p class="af-text-m">{{ offer.detail_text }}</p>
                 </div>
-              </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -31,16 +33,25 @@
 <script setup>
 import {onMounted, ref} from 'vue';
 import {fetchOffersData} from "../services/offersService";
+import {navigateTo} from "nuxt/app";
 
-const offers = ref([]);
+const bannerOffers = ref([]);
 
 onMounted(async () => {
   try {
-    offers.value = await fetchOffersData()
+    bannerOffers.value = await fetchOffersData('big')
+    console.log('bannerOffers.value', bannerOffers.value)
   } catch (error) {
     console.error(error);
   }
 });
+
+const openDetailPage = async (param, pageName) => {
+  const path = ref('/' + pageName + '/' + param.id)
+  await navigateTo({
+    path: path.value
+  })
+}
 </script>
 
 <style scoped>

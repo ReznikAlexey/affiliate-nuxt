@@ -2,20 +2,17 @@
   <div class="page-content af-offer-detail">
     <div class="container">
       <div class="flex-content"></div>
-      <h2 class="main-title-m">Уникальное предложение от Технодома!</h2>
-      <p class="af-text-m af-offer-text">Заберите свою скидку 40% на первую покупку в онлайн-магазине техники 'Технодом"
-        и получите
-        800 баллов в подарок! Введите наш промокод при оформлении заказа, чтобы начать собирать баллы, которые можно
-        обменять на различные бонусы и привилегии. Делайте покупки выгодно и собирайте баллы, которые сделают каждую
-        вашу покупку еще приятнее</p>
+      <h2 class="main-title-m"> {{currentOffers.title}}</h2>
+      <p class="af-text-m af-offer-text">{{currentOffers.detail_text}}</p>
       <div class="points-content">
         <h3 class="main-title-s">Для начисления баллов за покупку укажите ваш номер карты</h3>
         <ol class="af-ol-list">
-          <li class="af-ol-item">Внесите номер карты</li>
-          <li class="af-ol-item">Перейдите в магазин партнера</li>
-          <li class="af-ol-item">Совершите покупку на сайте партнера</li>
-          <li class="af-ol-item">Включите cookies!</li>
-          <li class="af-ol-item">Ожидайте получение</li>
+          <li
+              v-for="item in currentOffers.bonus_step"
+              class="af-ol-item"
+          >
+            {{item}}
+          </li>
         </ol>
         <div class="points-content__footer">
           <MainButton
@@ -116,12 +113,12 @@
 
 <script setup>
 import {useUserStore} from "../../stores/user";
-const userStore = useUserStore()
 import MainButton from "../../components/buttons/MainButton.vue";
-import {ref, reactive} from "vue";
+import {ref, onMounted} from "vue";
+import {fetchCurrentOfferByIdData} from "../../services/offersDetailService";
 
+const userStore = useUserStore()
 const route = useRoute()
-console.log(route.params)
 
 //modals
 const cardAuthorizationModal = ref(false)
@@ -142,6 +139,16 @@ async function onSubmit(event) {
   cardAuthorizationModal.value = false
 }
 const isUserCardAuth = computed(()=>userStore.getIsUserCardAuth )
+
+//
+const currentOffers = ref([]);
+onMounted(async () => {
+  try {
+    currentOffers.value = await fetchCurrentOfferByIdData(+route.params.id);
+  } catch (error) {
+    console.error(error);
+  }
+});
 
 </script>
 

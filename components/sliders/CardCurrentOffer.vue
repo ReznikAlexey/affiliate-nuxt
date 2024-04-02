@@ -29,6 +29,7 @@ defineProps({
   border-radius: size(8px);
   border: 1px solid $lightGrey;
   cursor: pointer;
+  width: 100%;
 }
 .card-image-wrapper {
   background-color: $lightGrey;
