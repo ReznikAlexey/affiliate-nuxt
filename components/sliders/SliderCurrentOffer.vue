@@ -29,6 +29,7 @@
           :red-text=slide.bonus
           :main-text=slide.type
           :sub-text=slide.text
+          :isLoading="isLoading"
           @click="openDetailPage(slide, 'offer')"
       ></CardCurrentOffer>
     </SwiperSlide>
@@ -51,11 +52,13 @@ import {navigateTo} from "nuxt/app";
 import { ref, onMounted } from 'vue';
 import {fetchOffersData} from "../../services/offersService";
 
-const currentOffers = ref([]);
+const currentOffers = ref(['fake','fake','fake','fake']);
+const isLoading = ref(true)
 
 onMounted(async () => {
   try {
     currentOffers.value = await fetchOffersData('small');
+    isLoading.value = false
   } catch (error) {
     console.error(error);
   }
@@ -72,5 +75,9 @@ const openDetailPage = async (param, pageName) => {
 <style lang="scss" scoped>
 .current-offers-swiper {
   padding-bottom: 1px;
+  .swiper-slide {
+    margin-right: 30px;
+    width: calc(100% / 4 - 90px / 4);
+  }
 }
 </style>

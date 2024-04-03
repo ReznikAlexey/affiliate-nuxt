@@ -2,16 +2,16 @@
   <div class="page-content af-offer-detail">
     <div class="container">
       <div class="flex-content"></div>
-      <h2 class="main-title-m"> {{currentOffers.title}}</h2>
-      <p class="af-text-m af-offer-text">{{currentOffers.detail_text}}</p>
+      <h2 class="main-title-m" v-if="currentOffers.title"> {{ $t(currentOffers.title) }}</h2>
+      <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text">{{ $t(currentOffers.detail_text) }}</p>
       <div class="points-content">
-        <h3 class="main-title-s">Для начисления баллов за покупку укажите ваш номер карты</h3>
-        <ol class="af-ol-list">
+        <h3 class="main-title-s"> {{$t('main.earnPointsEnterYourCard')}}</h3>
+        <ol class="af-ol-list" v-if="currentOffers.bonus_step">
           <li
               v-for="item in currentOffers.bonus_step"
               class="af-ol-item"
           >
-            {{item}}
+            {{$t(item)}}
           </li>
         </ol>
         <div class="points-content__footer">
@@ -100,9 +100,9 @@
 
           <UTooltip
               :ui="{base: 'tooltip-text-reset'}"
-              text="На лицевой стороне вашей кредитной или дебетовой карты. Номер обычно находится в нижней части карты и состоит из 16 цифр"
+              :text="$t('main.findCardNumberText')"
           >
-            <p class="af-text-m-grey">Где найти номер карты?</p>
+            <p class="af-text-m-grey"> {{ $t('main.whereFindCardNumber')}} </p>
           </UTooltip>
         </div>
       </template>

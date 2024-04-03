@@ -1,63 +1,63 @@
 [
   {
     "id": 0,
-    "image": "/_nuxt/assets/images/banner-1.png",
+    "image": "/banner-1.png",
     "bonus": "+800 баллов",
     "type": "Доставка продуктов",
     "text": "Скидка 40% на первый заказ",
-    "title": "Продукты питания",
-    "detail_text": "Заказывайте продукты из дома и получайте Номад клуб баллы за каждую покупку на сумму свыше 20 000 KZT! Будь то запасы продуктов, свежие овощи или товары для дома, каждая покупка приближает вас к захватывающим вознаграждениям с Номад клубом",
+    "title": "bannerText.banner1.title",
+    "detail_text": "bannerText.banner1.detailText",
     "bonus_step": [
-      "Введите ваш номер участника Номад клуб",
-      "Перейдите в магазин-партнер",
-      "Разрешите использование файлов cookie",
-      "Совершите покупку на веб-сайте партнера",
-      "Баллы будут начислены на ваш аккаунт"
+      "bannerText.banner1.bonusStep1",
+      "bannerText.banner1.bonusStep2",
+      "bannerText.banner1.bonusStep3",
+      "bannerText.banner1.bonusStep4",
+      "bannerText.banner1.bonusStep5"
     ],
     "size": "small"
   },
   {
     "id": 1,
-    "image": "/_nuxt/assets/images/banner-2.png",
+    "image": "/banner-2.png",
     "bonus": "До 400 баллов за заказ",
     "type": "Маркетплейс",
     "text": "Получайте мили за покупки",
-    "title": "Декоративная и уходовая косметика",
-    "detail_text": "Откройте для себя мир красоты и заботы с предложениями от нашего партнера! Исследуйте широкий ассортимент продуктов от известных мировых брендов и получайте дополнительные бонусные баллы в программе Nomad Club с каждой покупкой! Почувствуйте роскошь и удобство уже сегодня!",
+    "title": "bannerText.banner2.title",
+    "detail_text": "bannerText.banner2.detailText",
     "size": "small"
   },
   {
     "id": 2,
-    "image": "/_nuxt/assets/images/banner-3.png",
+    "image": "/banner-3.png",
     "bonus": "До 400 баллов за заказ",
     "type": "Маркетплейс",
     "text": "Получайте мили за покупки",
-    "title": "Дорожные сумки и чемоданы",
-    "detail_text": "Отправляйтесь в путешествие со вкусом! Поднимите ваше путешествие на новый уровень с нашим премиальным ассортиментом багажа и аксессуаров, тщательно разработанных как для функциональности, так и стиля. Готовясь к следующему приключению, накапливайте баллы с каждой покупкой через нашу программу лояльности Номад клуб. Путешествуйте с элегантностью и удобством вместе с нами.",
+    "title": "bannerText.banner3.title",
+    "detail_text": "bannerText.banner3.detailText",
     "size": "small"
   },
   {
     "id": 3,
-    "image": "/_nuxt/assets/images/banner-4.png",
+    "image": "/banner-4.png",
     "bonus": "До 400 баллов за заказ",
     "type": "Маркетплейс",
     "text": "Получайте мили за покупки",
-    "title": "Декоративная и уходовая косметика",
-    "detail_text": "Оцените удобство покупки витаминов и добавок онлайн! Исследуйте тщательно подобранный ассортимент, призванный повысить вашу энергию и жизненные силы. Получайте баллы с каждой покупкой, открывая доступ к эксклюзивным преимуществам и скидкам. Начните свой путь к здоровью вместе с нами!",
+    "title": "bannerText.banner4.title",
+    "detail_text": "bannerText.banner4.detailText",
     "size": "small"
   },
   {
     "id": 4,
-    "image": "/_nuxt/assets/images/big-banner-1.png",
-    "detail_text": "Покупайте онлайн эксклюзивные цвета Galaxy S24 Ultra, доступные только на samsung.kz, и получите дополнительно 500 баллов в программе Nomad Club.",
-    "title": "Электроника",
+    "image": "/big-banner-1.png",
+    "detail_text": "bannerText.banner5.detailText",
+    "title": "bannerText.banner5.title",
     "size": "big"
   },
   {
-    "id": 4,
-    "image": "/_nuxt/assets/images/big-banner-2.png",
-    "detail_text": "Начните свой ежедневный путь к здоровью с Galaxy Watch6 и получите 300 дополнительных баллов в программе Nomad Club.",
-    "title": "Электроника",
+    "id": 5,
+    "image": "/big-banner-2.png",
+    "detail_text": "bannerText.banner6.detailText",
+    "title": "bannerText.banner6.title",
     "size": "big"
   }
 ]

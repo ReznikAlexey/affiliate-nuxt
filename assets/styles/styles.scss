@@ -207,7 +207,7 @@ input[type=number] {
   height: 100%;
   background-color: $darkGrey;
   transform: translate3d(0, 100%, 0);
-  border-radius: 13px;
+  border-radius: size(13px);
   transition: transform .5s;
   .af-text-m {
     color: #fff;
@@ -312,6 +312,15 @@ input[type=number] {
 .tooltip-wrapper {
   width: 100%;
 }
+.af-skeleton {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 
 .mobile-ver {
   .main-title {
@@ -328,7 +337,6 @@ input[type=number] {
     font-size: size(22px);
   }
   .main-row-2 {
-    margin-top: size(12px);
     .offers__card-item {
       width: 100%;
     }
@@ -354,15 +362,19 @@ input[type=number] {
   .offers__card-info {
     padding: size(10px);
     position: static;
+    border-radius: 0;
     transform: unset;
   }
   .offers__card {
     padding-top: 0;
-    background-color: $darkGrey;
     border-radius: size(10px);
+    overflow: hidden;
     img {
       position: static;
-      border-radius: size(10px);
+    }
+    .af-skeleton {
+      position: static;
+      height: size(200px);
     }
   }
   .offers__card-item {
@@ -380,9 +392,6 @@ input[type=number] {
   }
   .page-content {
     padding: size(25px) 0;
-  }
-  .offers {
-    margin-top: size(22px);
   }
   .af-offer-text {
     margin-top: size(24px);

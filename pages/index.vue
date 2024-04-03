@@ -5,20 +5,33 @@
       <div class="current-offers">
         <div class="offers">
           <ul class="main-row-2">
-            <li
-                v-for="offer in bannerOffers"
-                :key="offer.id"
-                class="offers__card-item"
-                @click="openDetailPage(offer, 'offer')"
-            >
-              <div class="offers__card">
-                {{offer.image}}
-                <img :src="offer.image" alt="offer">
-                <div class="offers__card-info">
-                  <p class="af-text-m">{{ offer.detail_text }}</p>
+            <template v-if="bannerOffers.length">
+              <li
+                  v-for="offer in bannerOffers"
+                  :key="offer.id"
+                  class="offers__card-item"
+                  @click="openDetailPage(offer, 'offer')"
+              >
+                <div class="offers__card">
+                  <img :src="offer.image" alt="offer">
+                  <div class="offers__card-info">
+                    <p class="af-text-m">{{ $t(offer.detail_text) }}</p>
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </template>
+            <template v-else>
+              <li class="offers__card-item">
+                <div class="offers__card">
+                  <USkeleton class="af-skeleton" />
+                </div>
+              </li>
+              <li class="offers__card-item">
+                <div class="offers__card">
+                  <USkeleton class="af-skeleton" />
+                </div>
+              </li>
+            </template>
           </ul>
         </div>
         <h3 class="main-title-m">{{ $t("main.currentOffer") }}</h3>
@@ -40,7 +53,6 @@ const bannerOffers = ref([]);
 onMounted(async () => {
   try {
     bannerOffers.value = await fetchOffersData('big')
-    console.log('bannerOffers.value', bannerOffers.value)
   } catch (error) {
     console.error(error);
   }

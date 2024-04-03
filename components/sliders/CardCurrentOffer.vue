@@ -1,12 +1,24 @@
 <template>
   <div class="card-content">
     <div class="card-image-wrapper">
-      <img :src="image" alt="image">
+      <template v-if="isLoading">
+        <USkeleton class="af-skeleton" />
+      </template>
+      <template v-else>
+        <img :src="image" alt="image">
+      </template>
     </div>
     <div class="card-body">
-      <p class="card__red-text">{{ redText }}</p>
-      <p class="card__text-l">{{ mainText }}</p>
-      <p class="card__text-s">{{ subText }}</p>
+      <template v-if="isLoading">
+        <USkeleton class="h-4" />
+        <USkeleton class="h-4" />
+        <USkeleton class="h-4" />
+      </template>
+      <template v-else>
+        <p class="card__red-text">{{ redText }}</p>
+        <p class="card__text-l">{{ mainText }}</p>
+        <p class="card__text-s">{{ subText }}</p>
+      </template>
     </div>
   </div>
 </template>
@@ -17,6 +29,7 @@ defineProps({
   redText: String,
   mainText: String,
   subText: String,
+  isLoading: Boolean
 })
 </script>
 
@@ -32,7 +45,6 @@ defineProps({
   width: 100%;
 }
 .card-image-wrapper {
-  background-color: $lightGrey;
   width: 100%;
   padding-top: 66%;
   position: relative;
