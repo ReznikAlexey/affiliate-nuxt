@@ -21,7 +21,7 @@
           ></MainButton>
           <UTooltip
               v-if="!isUserCardAuth"
-              text="Внесите номер карты"
+              :text="$t('main.enterYourCardNumber')"
               class="tooltip-wrapper"
           >
             <MainButton

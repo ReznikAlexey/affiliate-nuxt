@@ -8,7 +8,8 @@
     "selectLanguage": "Select language",
     "earnPointsEnterYourCard": "To earn points for a purchase, enter your card number",
     "whereFindCardNumber": "Where can I find the card number?",
-    "findCardNumberText": "On the front of your credit or debit card. The number is usually located at the bottom of the card and consists of 16 digits"
+    "findCardNumberText": "On the front of your credit or debit card. The number is usually located at the bottom of the card and consists of 16 digits",
+    "enterYourCardNumber": "Enter your card number"
   },
   "card": {
     "anotherOffer": "Another offer",
