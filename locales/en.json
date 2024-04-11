@@ -12,7 +12,7 @@
   },
   "card": {
     "anotherOffer": "Another offer",
-    "cardNumber": "Write card number",
+    "cardNumber": "NC membership number",
     "cardAuth": "Card authorization",
     "goToShop": "Go to shop"
   },
