@@ -27,7 +27,7 @@
       <CardCurrentOffer
           :image=slide.image
           :red-text=slide.bonus
-          :main-text=slide.type
+          :main-text=slide.title
           :sub-text=slide.text
           :isLoading="isLoading"
           @click="openDetailPage(slide, 'offer')"
