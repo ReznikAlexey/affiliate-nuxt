@@ -20,7 +20,9 @@
   "dependencies": {
     "@nuxt/ui": "^2.13.0",
     "@pinia/nuxt": "^0.5.1",
+    "crypto-js": "^4.2.0",
     "dotenv": "^16.4.2",
+    "firebase": "^10.11.0",
     "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7",
     "sass": "^1.70.0"

@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     transpile: [/vue-i18n/]
   },
   modules: [['@pinia/nuxt', { autoImports: ['defineStore'] }], 'nuxt-swiper', '@nuxtjs/device', '@nuxt/ui'],
+  plugins: ['@/plugins/firebase.client.js'],
   css: [
     '@/assets/styles/styles.scss',
     "@/assets/fonts/stylesheet.css"
@@ -61,4 +62,14 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'light'
   },
+  runtimeConfig: {
+    apiKey: "AIzaSyAbwylvVD25yuMBLU2H7ND49FyXkYfwhZo",
+    authDomain: "affiliate-8d45d.firebaseapp.com",
+    projectId: "affiliate-8d45d",
+    storageBucket: "affiliate-8d45d.appspot.com",
+    messagingSenderId: "287584876106",
+    appId: "1:287584876106:web:223b2352f7ff2aaa8b98b3",
+    measurementId: "G-JTK7MHKWPK",
+    cryptoKey: "affiliate-key"
+  }
 })
