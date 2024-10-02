@@ -5,10 +5,10 @@
       class="af-button"
       target="_blank"
   >{{ text }}</a>
-  <button
+  <UButton
       v-else
       class="af-button"
-  >{{ text }}</button>
+  >{{ text }}</UButton>
 </template>
 
 <script setup>

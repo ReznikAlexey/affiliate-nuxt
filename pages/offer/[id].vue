@@ -18,6 +18,7 @@
         <div class="points-content__footer">
           <MainButton
             :text="$t('card.cardNumber')"
+            style="width: 100%;"
             @click="cardAuthorizationModal = true"
           ></MainButton>
           <UTooltip
@@ -26,6 +27,7 @@
             class="tooltip-wrapper"
           >
             <MainButton
+              style="width: 100%;"
               :text="$t('card.goToShop')"
               link=""
               :class="{ disabled: !isUserCardAuth }"
@@ -35,7 +37,7 @@
             v-else
             :text="$t('card.goToShop')"
             link=""
-            @click="saveToFirebase(5843882384)"
+            @click="saveToFirebase()"
             :class="{ disabled: !isUserCardAuth }"
           ></MainButton>
         </div>
@@ -94,6 +96,8 @@
 
           <MainButton
             type="submit"
+            :loading="loading"
+            @click="cardAuthorizationFunc(state.number)"
             :text="$t('card.cardAuth')"
             :disabled="validate().length > 0"
           ></MainButton>
@@ -114,19 +118,28 @@
 </template>
 
 <script setup>
-import { useUserStore } from "../../stores/user";
-import MainButton from "../../components/buttons/MainButton.vue";
 import { ref, onMounted } from "vue";
+
+import axios from 'axios';
+import CryptoJS from 'crypto-js';
+
+import MainButton from "../../components/buttons/MainButton.vue";
+
+import { useUserStore } from "../../stores/user";
 import { fetchCurrentOfferByIdData } from "../../services/offersDetailService";
 import { getDatabase, ref as fireRef, set } from "firebase/database";
-import CryptoJS from 'crypto-js';
+
+
+const toast = useToast();
 
 const config = useRuntimeConfig()
 
 const userStore = useUserStore();
 const route = useRoute();
+
 //modals
 const cardAuthorizationModal = ref(false);
+const loading = ref(false);
 
 
 //form
@@ -141,25 +154,87 @@ const validate = () => {
 };
 
 const onSubmit = async (event) => {
-  userStore.isUserCardAuth = true;
-  cardAuthorizationModal.value = false;
 };
 const isUserCardAuth = computed(() => userStore.getIsUserCardAuth);
 
-const saveToFirebase = async (memberId) => {
+const saveToFirebase = async () => {
+  let memberId = state.value.number
   try {
     const db = getDatabase();
-    set(fireRef(db, "memberID/" + route.params.id), {
-      encrypted: CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString(),
-      toShopURL: "https://www.samsung.com/kz_ru/smartphones/galaxy-s24-ultra/buy/?cid=12414123" 
+    let encrypted = CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString()
+
+    await set(fireRef(db, "memberID/" + route.params.id + "/" + encrypted.slice(0, 6)), {
+      encrypted,
+      toShopURL: "https://www.samsung.com/kz_ru/smartphones/galaxy-s24-ultra/buy/?cid=311111"
     });
   } catch (error) {
     console.error("Error adding document: ", error);
   }
 };
 
-//
+const cardAuthorizationFunc = async (memberId) => {
+  loading.value = true
+  const data = {
+    username: config.public.apiUsername,
+    password: config.public.apiPassword,
+  };
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'x-api-key': config.public.apiKey
+  }
+
+  try {
+    const { token, message } = await $fetch('https://api.gravty.me/v2/login', { method: "POST", body: data, headers })
+
+
+    if (!token) {
+      throw new Error(message)
+    }
+
+
+    console.log(token)
+    let searchHeaders = {
+      'Content-Type': 'application/json',
+      'x-api-key': config.public.apiKey,
+      'Authorization': `JWT ${token}`,
+    }
+    console.log(searchHeaders)
+
+
+    const memberSearch = await $fetch(`https://api.gravty.me/v1/members/search/?member_id=${memberId}`,  { method: "GET", headers: searchHeaders})
+
+
+    console.log(memberSearch)
+
+
+    if (memberSearch.length === 0) {
+      throw new Error("Ошибка авторизации")
+    }
+
+
+    userStore.isUserCardAuth = true;
+    cardAuthorizationModal.value = false;
+    toast.add({
+      color: 'green',
+      title: 'Карта успешно авторизована'
+    })
+
+    console.log(memberSearch)
+  } catch (error) {
+    console.log(error);
+    toast.add({
+      color: 'red',
+      title: "Ошибка авторизации"
+    })
+  } finally {
+    loading.value = false
+  }
+
+};
+
 const currentOffers = ref([]);
+
 onMounted(async () => {
   try {
     currentOffers.value = await fetchCurrentOfferByIdData(+route.params.id);

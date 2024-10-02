@@ -3,7 +3,6 @@ import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
-  devtools: {enabled: false},
   app: {
     head: {
       title: "Nomad Club",
@@ -14,10 +13,25 @@ export default defineNuxtConfig({
   },
   ssr: true,
   nitro: {
+    // devProxy: {
+    //   "/v2/**": {
+    //     target: "http://api.gravty.me/v2/",
+    //     prependPath: true,
+    //     changeOrigin: true,
+    //   },
+    // },
     prerender: {
       failOnError: false,
     }
   },
+  // routeRules: {
+  //   '/v2/**': {
+  //     proxy: { to: "http://api.gravty.me/v2/**" },
+  //   },
+  //   '/v1/**': {
+  //     proxy: { to: "http://api.gravty.me/v1/**" },
+  //   }
+  // },
   build: {
     transpile: [/vue-i18n/]
   },
@@ -54,15 +68,15 @@ export default defineNuxtConfig({
     {path: '~/components/buttons', pathPrefix: false},
     '~/components'
   ],
-  // swiper: {
-  //   prefix: 'Swiper',
-  //   styleLang: 'css',
-  //   modules: ['navigation'],
-  // },
   colorMode: {
     preference: 'light'
   },
   runtimeConfig: {
+    public: {
+      apiUsername: process.env.VITE_API_USERNAME,
+      apiPassword: process.env.VITE_API_PASSWORD,
+      apiKey: process.env.VITE_API_KEY,
+    },
     apiKey: "AIzaSyAbwylvVD25yuMBLU2H7ND49FyXkYfwhZo",
     authDomain: "affiliate-8d45d.firebaseapp.com",
     projectId: "affiliate-8d45d",

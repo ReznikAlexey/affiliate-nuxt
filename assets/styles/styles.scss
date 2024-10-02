@@ -220,10 +220,16 @@ input[type=number] {
   row-gap: size(20px);
 }
 .points-content__footer {
-  display: flex;
-  column-gap: size(30px);
-  max-width: size(650px);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }
+@media (max-width: 780px) {
+    .points-content__footer {
+        grid-template-columns: 1fr;
+    }
+}
+
 .af-ol-item {
   display: flex;
   align-items: center;
