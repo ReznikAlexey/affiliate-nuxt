@@ -5,8 +5,7 @@
       <h2 class="main-title-m" v-if="currentOffers.title">
         {{ $t(currentOffers.title) }}
       </h2>
-      <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text">
-        {{ $t(currentOffers.detail_text) }}
+      <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text" v-html="currentOffers.detail_text[$i18n.locale]">
       </p>
       <div class="points-content">
         <h3 class="main-title-s">{{ $t("main.earnPointsEnterYourCard") }}</h3>
@@ -120,15 +119,15 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
-import axios from 'axios';
 import CryptoJS from 'crypto-js';
+import moment from 'moment'
 
 import MainButton from "../../components/buttons/MainButton.vue";
 
 import { useUserStore } from "../../stores/user";
 import { fetchCurrentOfferByIdData } from "../../services/offersDetailService";
 import { getDatabase, ref as fireRef, set } from "firebase/database";
-
+import { useI18n } from "vue-i18n";
 
 const toast = useToast();
 
@@ -141,6 +140,7 @@ const route = useRoute();
 const cardAuthorizationModal = ref(false);
 const loading = ref(false);
 
+const { t } = useI18n()
 
 //form
 const state = ref({
@@ -153,8 +153,7 @@ const validate = () => {
   return errors;
 };
 
-const onSubmit = async (event) => {
-};
+const onSubmit = async (event) => {};
 const isUserCardAuth = computed(() => userStore.getIsUserCardAuth);
 
 const saveToFirebase = async () => {
@@ -162,11 +161,16 @@ const saveToFirebase = async () => {
   try {
     const db = getDatabase();
     let encrypted = CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString()
+    console.log(memberId)
 
-    await set(fireRef(db, "memberID/" + route.params.id + "/" + encrypted.slice(0, 6)), {
+    await set(fireRef(db, "memberID/" + route.params.id + "/" + memberId), {
       encrypted,
-      toShopURL: "https://www.samsung.com/kz_ru/smartphones/galaxy-s24-ultra/buy/?cid=311111"
+      timestamp: moment().format(),
+      memberId,
+      toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}`
     });
+
+    window.open(`${currentOffers.value.toShopUrl}?cid=${encrypted}`, '_blank')
   } catch (error) {
     console.error("Error adding document: ", error);
   }
@@ -205,11 +209,9 @@ const cardAuthorizationFunc = async (memberId) => {
     const memberSearch = await $fetch(`https://api.gravty.me/v1/members/search/?member_id=${memberId}`,  { method: "GET", headers: searchHeaders})
 
 
-    console.log(memberSearch)
-
 
     if (memberSearch.length === 0) {
-      throw new Error("Ошибка авторизации")
+      throw new Error(t('error.authorize'))
     }
 
 
@@ -217,7 +219,7 @@ const cardAuthorizationFunc = async (memberId) => {
     cardAuthorizationModal.value = false;
     toast.add({
       color: 'green',
-      title: 'Карта успешно авторизована'
+      title: t('success.authorize')
     })
 
     console.log(memberSearch)
@@ -225,7 +227,7 @@ const cardAuthorizationFunc = async (memberId) => {
     console.log(error);
     toast.add({
       color: 'red',
-      title: "Ошибка авторизации"
+      title: t('error.authorize')
     })
   } finally {
     loading.value = false

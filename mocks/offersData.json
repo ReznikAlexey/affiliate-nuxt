@@ -5,6 +5,7 @@
     "bonus": "+800 баллов",
     "type": "Доставка продуктов",
     "text": "Скидка 50% на первый заказ",
+    "title": "bannerText.banner1.title",
     "detail_text": {
       "kz": "Интернеттегі азық-түлік сатып алу және өткізімдің алдындағы артықшылықтарды ашу! 20 000 KZT-дан асқан өткізімді барына таңдау кезінде наградаларды алыңыз! Депенің маңызды өнімдерін, жаңа етістіктерін немесе үй тиімділігінен толық толтырсаңыз, өткізім әрбір сатып алу жақындықтарын қамтып алуға жақындайды. Nomad Club таңдау кезінде сені жақындап тұратын қызықты наградаларға жеткізеді.",
       "ru": "Заказывайте продукты из дома и получайте Номад клуб баллы за каждую покупку на сумму свыше 20 000 KZT! Будь то запасы продуктов, свежие овощи или товары для дома, каждая покупка приближает вас к захватывающим вознаграждениям с Номад клубом",
@@ -17,7 +18,8 @@
       "bannerText.banner1.bonusStep4",
       "bannerText.banner1.bonusStep5"
     ],
-    "size": "small"
+    "size": "small",
+    "toShopUrl": "https://google.com"
   },
   {
     "id": 1,
@@ -26,8 +28,13 @@
     "type": "Маркетплейс",
     "text": "Получайте мили за покупки",
     "title": "bannerText.banner2.title",
-    "detail_text": "bannerText.banner2.detailText",
-    "size": "small"
+    "detail_text": {
+      "kz": "Онлайн косметика магазинімізде арнайы краса тәжірибесін таптырыңыз. Дәуірлі брендтердің топтық өнімдерін таныңыз, барлық оларды жоғары сапалы көріңіз, сіздің алдыңызда тұра алады. Орнатылатын кездесуімізде, өзіңізге арнайы жағдайлар мен жеңілдіктерге жетуіңіз мүмкін. Люкс және ықпалды төменде!",
+      "ru": "Откройте для себя мир красоты и заботы с предложениями от нашего партнера! Исследуйте широкий ассортимент продуктов от известных мировых брендов и получайте дополнительные бонусные баллы в программе Nomad Club с каждой покупкой! Почувствуйте роскошь и удобство уже сегодня!",
+      "en": "Discover the ultimate beauty experience with our partner. Explore a wide range of top-quality products from renowned brands, all conveniently available at your fingertips. Plus, earn bonus Nomad Club points with every purchase, bringing you closer to exclusive rewards and discounts. Experience luxury and convenience today!"
+    },
+    "size": "small",
+    "toShopUrl": "https://google.com"
   },
   {
     "id": 2,
@@ -36,8 +43,15 @@
     "type": "Маркетплейс",
     "text": "Получайте мили за покупки",
     "title": "bannerText.banner3.title",
-    "detail_text": "bannerText.banner3.detailText",
-    "size": "small"
+    "detail_text": {
+      "kz": "Өзіңізді таңғалатын кезек, рюкзактар мен саяхат құралдарының онлайн таңдауы арқылы кураторлық коллекциямыздан таңдаңыз. Багаж мен аксессуарлардың еңбекқор бағдарламасымен таңдаңыз және сапалы. Келесі саяхатқа дайынланғанда, өзіңізді көрсете алу үшін көздеріңізді ашыңыз. Жаңа приключениеңіздің өзгерістерін ашуды, сатып алумен баллдарды біріктіру арқылы жасаңыз, біздің дегенмен лоялдылық бағдарламамен елімді негізгі көмектерді ашыңыз. Бізбен бірге әділетті және ықпалды саяхат етіңіз.",
+      "ru": "Отправляйтесь в путешествие со вкусом! Поднимите ваше путешествие на новый уровень с нашим премиальным ассортиментом багажа и аксессуаров, тщательно разработанных как для функциональности, так и стиля. Готовясь к следующему приключению, накапливайте баллы с каждой покупкой через нашу программу лояльности Номад клуб. Путешествуйте с элегантностью и удобством вместе с нами.",
+      "en": "Embark on your journey with sophistication by browsing our curated collection of suitcases, backpacks, and travel essentials online. Elevate your travel experience with our premium range of luggage and accessories, meticulously crafted for both functionality and style. As you prepare for your next adventure, accumulate points with each purchase, unlocking exclusive rewards and privileges through our loyalty program. Travel in elegance and convenience with us."
+    },
+    
+    
+    "size": "small",
+    "toShopUrl": "https://google.com"
   },
   {
     "id": 3,
@@ -46,21 +60,36 @@
     "type": "Маркетплейс",
     "text": "Получайте мили за покупки",
     "title": "bannerText.banner4.title",
-    "detail_text": "bannerText.banner4.detailText",
-    "size": "small"
+    "detail_text": {
+      "kz": "Ұстаздар мен витаминдерді онлайн сатып алудың ыңғайлылығын таныңыз! Біздің сүзгілікті таңдауларымызға жақындасып, сіздің әрекеттілігіңізді және маңызығыңызды жетістіру үшін дайындалған жоғары сапалы өнімдерді ұмытасыз. Әр сатып алумен қажетті баллдарды алыңыз, жеке артықшылықтар мен жеңілдіктерді ашу. Бізбен бірге денсаулық жолыңызға бағыттаның сапасын алыңыз!",
+      "ru": "Оцените удобство покупки витаминов и добавок онлайн! Исследуйте тщательно подобранный ассортимент, призванный повысить вашу энергию и жизненные силы. Получайте баллы с каждой покупкой, открывая доступ к эксклюзивным преимуществам и скидкам. Начните свой путь к здоровью вместе с нами!",
+      "en": "Experience the seamless convenience of procuring premium-grade supplements and vitamins online! Immerse yourself in our carefully curated selection, meticulously crafted to elevate your health and vitality. Accumulate rewards with each purchase, unveiling exclusive perks and savings. Begin your journey towards optimal health today and indulge in the sophistication of shopping with us!"    
+    },
+    "size": "small",
+    "toShopUrl": "https://google.com"
   },
   {
     "id": 4,
     "image": "/new-big-banner-1.png",
-    "detail_text": "bannerText.banner5.detailText",
+    "detail_text": {
+      "kz": "Samsung.kz сайтында тек Galaxy S24 Ultra үшін ерекше түстерді онлайн сатып алыңыз және 500 қосымша Nomad Club балл алыңыз.",
+      "ru": "Покупайте онлайн эксклюзивные цвета Galaxy S24 Ultra, доступные только на samsung.kz, и получите дополнительно 500 баллов в программе Nomad Club.",
+      "en": "Welcome to Nomad Club, Air Astana’s loyalty programme designed to reward and recognize our most valued travelers. <br/><br/>We believe your loyalty deserves to be celebrated with exclusive benefits tailored just for you.Membership Tiers Nomad Club offers four tiers of membership: Blue, Silver, Gold, and Diamond. Each tier provides you with distinct advantages that enhance your travel experience. Upon joining the programme, all members start at the Blue tier. As you travel with Air Astana and accumulate tier points, you will have the opportunity to advance through the tiers and unlock more privileges. To qualify for Silver, Gold, or Diamond membership, you must meet the specified criteria within a single calendar year (from January 1 to December 31). Once you meet these requirements, you will receive a unique membership card and access to an array of additional benefits."
+    },
     "title": "bannerText.banner5.title",
-    "size": "big"
+    "size": "big",
+    "toShopUrl": "https://google.com"
   },
   {
     "id": 5,
     "image": "/big-banner-2.png",
-    "detail_text": "bannerText.banner6.detailText",
+    "detail_text": {
+      "kz": "Galaxy Watch6 арқылы күнделікті тәртіпті әуе сақтау жолыңызды бастаңыз және Nomad Club программасында 300 қосымша балл алыңыз.",
+      "ru": "Начните свой ежедневный путь к здоровью с Galaxy Watch6 и получите 300 дополнительных баллов в программе Nomad Club.",
+      "en": "Start your everyday wellness journey with Galaxy Watch6 and gain 300 extra Nomad club points."
+    },
     "title": "bannerText.banner6.title",
-    "size": "big"
+    "size": "big",
+    "toShopUrl": "https://google.com"
   }
 ]

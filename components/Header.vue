@@ -18,7 +18,7 @@
                 <router-link class="nav-link" to="/">{{ $t("main.offer") }}</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link" to="/">{{ $t("main.info") }}</router-link>
+                <router-link class="nav-link" to="/terms-and-conditions">{{ $t("main.info") }}</router-link>
               </li>
             </ul>
           </nav>
@@ -75,11 +75,11 @@
       <div class="burger-body">
         <nav class="burger-nav">
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item" @click.prevent="isBurgerOpen = false">
               <router-link class="nav-link" to="/">{{ $t("main.offer") }}</router-link>
             </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/">{{ $t("main.info") }}</router-link>
+            <li class="nav-item" @click.prevent="isBurgerOpen = false">
+              <router-link class="nav-link" to="/terms-and-conditions">{{ $t("main.info") }}</router-link>
             </li>
           </ul>
         </nav>
