@@ -13,9 +13,9 @@
                   @click="openDetailPage(offer, 'offer')"
               >
                 <div class="offers__card">
-                  <img :src="offer.image" alt="offer">
+                  <img :src="offer.image" alt="offer" :key="offer.id">
                   <div class="offers__card-info">
-                    <p class="af-text-m">{{ $t(offer.detail_text) }}</p>
+                    <p class="af-text-m" v-html="offer.detail_text[$i18n.locale]" />
                   </div>
                 </div>
               </li>
