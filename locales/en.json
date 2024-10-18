@@ -48,7 +48,14 @@
       "detailText": "Start your everyday wellness journey with Galaxy Watch6 and gain 300 extra Nomad club points."
     }
   },
+<<<<<<< Updated upstream
   "termsAndConditions": "",
+=======
+
+
+    "termsAndConditions": "Terms and Conditions",
+
+>>>>>>> Stashed changes
   "error": {
     "authorize": "Authorization error"
   },

@@ -3,7 +3,7 @@
         <div class="container">
             <p class="main-title-m">Terms and conditions</p>
 
-        
+ 
             <div class="points-content" v-html="localTermsAndConditions[$i18n.locale]" />
         </div>
     </div>
