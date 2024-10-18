@@ -13,7 +13,7 @@
                   @click="openDetailPage(offer, 'offer')"
               >
                 <div class="offers__card">
-                  <img :src="offer.image" alt="offer" :key="offer.id">
+                  <img :src="offer.image" alt="offer" :key="offer.text">
                   <div class="offers__card-info">
                     <p class="af-text-m" v-html="offer.detail_text[$i18n.locale]" />
                   </div>
@@ -59,6 +59,7 @@ onMounted(async () => {
 });
 
 const openDetailPage = async (param, pageName) => {
+  console.log(param, pageName);
   const path = ref('/' + pageName + '/' + param.id)
   await navigateTo({
     path: path.value

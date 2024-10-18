@@ -4,12 +4,13 @@
             <p class="main-title-m">Terms and conditions</p>
 
         
-            <div class="points-content" v-html="$t('termsAndConditions')" />
+            <div class="points-content" v-html="localTermsAndConditions[$i18n.locale]" />
         </div>
     </div>
 </template>
 
 <script setup>
+import {localTermsAndConditions} from "~/pages/terms-and-conditions/consts";
 </script>
 
 <style></style>
