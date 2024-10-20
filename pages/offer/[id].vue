@@ -5,6 +5,10 @@
       <h2 class="main-title-m" v-if="currentOffers.title">
         {{ $t(currentOffers.title) }}
       </h2>
+       <!-- Display Localized Bonus -->
+      <h3 class="bonus-text" v-if="currentOffers.bonus">
+        {{ currentOffers.bonus[$i18n.locale] }}
+      </h3>
       <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text" v-html="currentOffers.detail_text[$i18n.locale]">
       </p>
       <div class="points-content">
