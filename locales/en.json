@@ -50,7 +50,7 @@
   },
 
 
-    "termsAndConditions": "Terms and Conditions",
+  "termsAndConditions": "Terms and Conditions",
 
   "error": {
     "authorize": "Authorization error"
