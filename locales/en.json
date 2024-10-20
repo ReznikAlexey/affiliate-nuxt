@@ -1,61 +1,58 @@
 {
   "main": {
-    "title": "Nomad Club online shop",
-    "currentOffer": "Current Offer",
-    "offer": "Our offers",
-    "info": "Terms & conditions",
-    "offerFrom": "Offers from Technodom",
-    "selectLanguage": "Select language",
-    "earnPointsEnterYourCard": "To earn points for a purchase, enter your card number",
-    "whereFindCardNumber": "Where can I find the card number?",
-    "findCardNumberText": "On the front of your credit or debit card. The number is usually located at the bottom of the card and consists of 16 digits",
-    "enterYourCardNumber": "Enter your card number"
+    "title": "Номад клуб онлайн дүкені",
+    "currentOffer": "Текущее предложение",
+    "offer": "Біздің ұсыныстарымыз",
+    "info": "Келісім және шарттар",
+    "offerFrom": "Предложения от Технодом",
+    "selectLanguage": "Выберите язык",
+    "earnPointsEnterYourCard": "Сатып алу үшін ұпай жинау үшін карта нөмірін енгізіңіз",
+    "whereFindCardNumber": "Карта нөмірін қайдан табуға болады?",
+    "findCardNumberText": "Несиелік немесе дебеттік картаңыздың алдыңғы жағында. Нөмір әдетте картаның төменгі жағында орналасады және 16 цифрдан тұрады",
+    "enterYourCardNumber": "Карта нөмірін енгізіңіз"
   },
   "card": {
-    "anotherOffer": "Another offer",
-    "cardNumber": "NC membership number",
-    "cardAuth": "Card authorization",
-    "goToShop": "Go to shop"
+    "anotherOffer": "Другие предложения",
+    "cardNumber": "Карта нөмірін енгізіңіз",
+    "cardAuth": "Картаны авторизациялау",
+    "goToShop": "Дүкенге барыңыз"
   },
   "bannerText": {
     "banner1": {
-      "title": "Groceries",
-      "detailText": "Dive into online grocery shopping and unlock rewards with every purchase exceeding 20,000 KZT! Whether you're stocking up on pantry staples, fresh produce, or household essentials, every purchase brings you closer to exciting rewards with Nomad Club.",
-      "bonusStep1": "Insert your NC membership number",
-      "bonusStep2": "Go to the partner shop",
-      "bonusStep3": "Enable cookies",
-      "bonusStep4": "Make a purchase on the partner's website",
-      "bonusStep5": "Points will be added to your account"
+      "title": "Азық-түлік",
+      "detailText": "Интернеттегі азық-түлік сатып алу және өткізімдің алдындағы артықшылықтарды ашу! 20 000 KZT-дан асқан өткізімді барына таңдау кезінде наградаларды алыңыз! Депенің маңызды өнімдерін, жаңа етістіктерін немесе үй тиімділігінен толық толтырсаңыз, өткізім әрбір сатып алу жақындықтарын қамтып алуға жақындайды. Nomad Club таңдау кезінде сені жақындап тұратын қызықты наградаларға жеткізеді.",
+      "bonusStep1": "Номад Клуб участығы нөміріңізді енгізіңіз",
+      "bonusStep2": "Партнер дүкенге өтіңіз",
+      "bonusStep3": "Файлдардың cookie-ларды пайдалануға рұқсат беріңіз",
+      "bonusStep4": "Партнер веб-сайтында сатып алу жасаңыз",
+      "bonusStep5": "Баллар сіздің есептік жазуыңызға қосылады"
     },
     "banner2": {
-      "title": "Make up and skin care",
-      "detailText": "Discover the ultimate beauty experience with our partner. Explore a wide range of top-quality products from renowned brands, all conveniently available at your fingertips. Plus, earn bonus Nomad Club points with every purchase, bringing you closer to exclusive rewards and discounts. Experience luxury and convenience today!"
+      "title": "Cәндік және күтім косметикасы",
+      "detailText": "Онлайн косметика магазинімізде арнайы краса тәжірибесін таптырыңыз. Дәуірлі брендтердің топтық өнімдерін таныңыз, барлық оларды жоғары сапалы көріңіз, сіздің алдыңызда тұра алады. Орнатылатын кездесуімізде, өзіңізге арнайы жағдайлар мен жеңілдіктерге жетуіңіз мүмкін. Люкс және ықпалды төменде!"
     },
     "banner3": {
-      "title": "Travel suitcases and accessories",
-      "detailText": "Embark on your journey with sophistication by browsing our curated collection of suitcases, backpacks, and travel essentials online. Elevate your travel experience with our premium range of luggage and accessories, meticulously crafted for both functionality and style. As you prepare for your next adventure, accumulate points with each purchase, unlocking exclusive rewards and privileges through our loyalty program. Travel in elegance and convenience with us."
+      "title": "Жол сөмкесі мен чемодан",
+      "detailText": "Өзіңізді таңғалатын кезек, рюкзактар мен саяхат құралдарының онлайн таңдауы арқылы кураторлық коллекциямыздан таңдаңыз. Багаж мен аксессуарлардың еңбекқор бағдарламасымен таңдаңыз және сапалы. Келесі саяхатқа дайынланғанда, өзіңізді көрсете алу үшін көздеріңізді ашыңыз. Жаңа приключениеңіздің өзгерістерін ашуды, сатып алумен баллдарды біріктіру арқылы жасаңыз, біздің дегенмен лоялдылық бағдарламамен елімді негізгі көмектерді ашыңыз. Бізбен бірге әділетті және ықпалды саяхат етіңіз."
     },
     "banner4": {
-      "title": "Make up and skin care",
-      "detailText": "Experience the seamless convenience of procuring premium-grade supplements and vitamins online! Immerse yourself in our carefully curated selection, meticulously crafted to elevate your health and vitality. Accumulate rewards with each purchase, unveiling exclusive perks and savings. Begin your journey towards optimal health today and indulge in the sophistication of shopping with us!"
+      "title": "Cәндік және күтім косметикасы",
+      "detailText": "Ұстаздар мен витаминдерді онлайн сатып алудың ыңғайлылығын таныңыз! Біздің сүзгілікті таңдауларымызға жақындасып, сіздің әрекеттілігіңізді және маңызығыңызды жетістіру үшін дайындалған жоғары сапалы өнімдерді ұмытасыз. Әр сатып алумен қажетті баллдарды алыңыз, жеке артықшылықтар мен жеңілдіктерді ашу. Бізбен бірге денсаулық жолыңызға бағыттаның сапасын алыңыз!"
     },
     "banner5": {
-      "title": "Nomad Club: Exclusive Member Benefits",
-      "detailText": "Welcome to Nomad Club, Air Astana’s loyalty programme designed to reward and recognize our most valued travelers.  \nWe believe your loyalty deserves to be celebrated with exclusive benefits tailored just for you.Membership Tiers Nomad Club offers four tiers of membership: Blue, Silver, Gold, and Diamond. Each tier provides you with distinct advantages that enhance your travel experience. Upon joining the programme, all members start at the Blue tier. As you travel with Air Astana and accumulate tier points, you will have the opportunity to advance through the tiers and unlock more privileges. To qualify for Silver, Gold, or Diamond membership, you must meet the specified criteria within a single calendar year (from January 1 to December 31). Once you meet these requirements, you will receive a unique membership card and access to an array of additional benefits."
+      "title": "Электроника",
+      "detailText": "Samsung.kz сайтында тек Galaxy S24 Ultra үшін ерекше түстерді онлайн сатып алыңыз және 500 қосымша Nomad Club балл алыңыз."
     },
     "banner6": {
-      "title": "Electronics",
-      "detailText": "Start your everyday wellness journey with Galaxy Watch6 and gain 300 extra Nomad club points."
+      "title": "Электроника",
+      "detailText": "Galaxy Watch6 арқылы күнделікті тәртіпті әуе сақтау жолыңызды бастаңыз және Nomad Club программасында 300 қосымша балл алыңыз."
     }
   },
-
-
-  "termsAndConditions": "Terms and Conditions",
-
+  "termsAndConditions": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
   "error": {
-    "authorize": "Authorization error"
+    "authorize": "Ошибка авторизации"
   },
   "success": {
-    "authorize": "Authorization success"
+    "authorize": "Карта успешно авторизирована"
   }
 }
