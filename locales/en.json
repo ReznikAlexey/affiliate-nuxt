@@ -48,14 +48,10 @@
       "detailText": "Start your everyday wellness journey with Galaxy Watch6 and gain 300 extra Nomad club points."
     }
   },
-<<<<<<< Updated upstream
-  "termsAndConditions": "",
-=======
 
 
-    "termsAndConditions": "The Nomad Club loyalty program (“Nomad Club”) rewards the loyalty of its members.",
+    "termsAndConditions": "Terms and Conditions",
 
->>>>>>> Stashed changes
   "error": {
     "authorize": "Authorization error"
   },
