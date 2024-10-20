@@ -2,7 +2,7 @@
   {
     "id": 0,
     "image": "/banner-1.png",
-    "bonus": "bannerText.banner1.title",
+    "bonus": "bannerText.banner1.bonus",
     "type": "Доставка продуктов",
     "text": "Скидка 50% на первый заказ",
     "title": "bannerText.banner1.title",
