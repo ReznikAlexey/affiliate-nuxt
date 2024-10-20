@@ -2,13 +2,12 @@
   <div class="page-content af-offer-detail">
     <div class="container">
       <div class="flex-content"></div>
-       <!-- Display Localized Bonus Text -->
-      <p class="bonus-text" v-if="currentOffers.bonus">
-        {{ currentOffers.bonus[$i18n.locale] || currentOffers.bonus['en'] }}
-      </p>
       <h2 class="main-title-m" v-if="currentOffers.title">
         {{ $t(currentOffers.title) }}
       </h2>
+      <h3 class="bonus-text" v-if="currentOffers.bonus">
+        {{ currentOffers.bonus[$i18n.locale] }}
+      </h3>
       <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text" v-html="currentOffers.detail_text[$i18n.locale]">
       </p>
       <div class="points-content">

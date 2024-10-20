@@ -2,11 +2,7 @@
   {
     "id": 0,
     "image": "/banner-1.png",
-    "bonus": {
-      "kz": "Тапсырыс үшін 400 ұпайға дейін",
-      "ru": "До 400 баллов за заказ",
-      "en": "Up to 400 points per order"
-    },
+    "bonus": "bannerText.banner1.title",
     "type": "Доставка продуктов",
     "text": "Скидка 50% на первый заказ",
     "title": "bannerText.banner1.title",
