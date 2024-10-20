@@ -16,8 +16,7 @@
                   <img :src="offer.image" alt="offer" :key="offer.text">
                   <div class="offers__card-info">
                     <p class="af-text-m" v-html="offer.detail_text[$i18n.locale]" />
-                    <!-- Localized bonus text -->
-                    <p class="af-bonus-m" v-if="offer.bonus">{{ $t(offer.bonus) }}</p>
+                   
                   </div>
                 </div>
               </li>
