@@ -185,7 +185,7 @@ const cardAuthorizationFunc = async (memberId) => {
 
   const headers = {
     'Content-Type': 'application/json',
-    'x-api-key': config.public.apiKey
+    'x-api-key': config.public.apiKey,
     'Access-Control-Allow-Origin':'*', 
     'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'
   }
