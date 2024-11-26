@@ -1,7 +1,7 @@
 <template>
     <div class="page-content">
         <div class="container">
-            <p class="main-title-m">Terms and conditions</p>
+            <p class="main-title-m">{{ $t('termsAndConditions') }}</p>
 
  
             <div class="points-content" v-html="localTermsAndConditions[$i18n.locale]" />
