@@ -22,13 +22,13 @@
   >
     <SwiperSlide
         v-for="slide in currentOffers"
-        :key="slide"
+        :key="slide.id"
     >
       <CardCurrentOffer
-          :image=slide.image
-          :red-text= slide.bonus
-          :main-text=slide.title
-          :sub-text=slide.text
+          :image="slide.image"
+          :red-text="isTranslationKey(slide.bonus) ? $t(slide.bonus) : slide.bonus"
+          :main-text="isTranslationKey(slide.title) ? $t(slide.title) : slide.title"
+          :sub-text="slide.text"
           :isLoading="isLoading"
           @click="openDetailPage(slide, 'offer')"
       ></CardCurrentOffer>
@@ -47,29 +47,34 @@
 </template>
 
 <script setup>
-import {navigateTo} from "nuxt/app";
-
 import { ref, onMounted } from 'vue';
-import {fetchOffersData} from "../../services/offersService";
+import { useI18n } from 'vue-i18n';
+import { navigateTo } from "nuxt/app";
+import { fetchOffersData } from "../../services/offersService";
 
+const { t, locale } = useI18n();
 const currentOffers = ref(['fake','fake','fake','fake']);
-const isLoading = ref(true)
+const isLoading = ref(true);
+
+const isTranslationKey = (text) => {
+  return text && typeof text === 'string' && text.startsWith('bannerText.');
+};
 
 onMounted(async () => {
   try {
     currentOffers.value = await fetchOffersData('small');
-    isLoading.value = false
+    isLoading.value = false;
   } catch (error) {
     console.error(error);
   }
 });
 
 const openDetailPage = async (param, pageName) => {
-  const path = ref('/' + pageName + '/' + param.id)
+  const path = `/${locale.value}/${pageName}/${param.id}`;
   await navigateTo({
-    path: path.value
-  })
-}
+    path: path
+  });
+};
 </script>
 
 <style lang="scss" scoped>
