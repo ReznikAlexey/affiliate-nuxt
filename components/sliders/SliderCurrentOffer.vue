@@ -26,7 +26,7 @@
     >
       <CardCurrentOffer
           :image=slide.image
-          :red-text= slide.bonus
+          :red-text="isTranslationKey(slide.bonus) ? $t(slide.bonus) : slide.bonus"
           :main-text=slide.title
           :sub-text=slide.text
           :isLoading="isLoading"
@@ -54,6 +54,10 @@ import {fetchOffersData} from "../../services/offersService";
 
 const currentOffers = ref(['fake','fake','fake','fake']);
 const isLoading = ref(true)
+
+const isTranslationKey = (text) => {
+  return text && typeof text === 'string' && text.startsWith('bannerText.');
+};
 
 onMounted(async () => {
   try {
