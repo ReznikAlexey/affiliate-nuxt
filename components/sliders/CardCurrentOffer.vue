@@ -17,13 +17,20 @@
       <template v-else>
         <p class="card__red-text">{{ redText }}</p>
         <p class="card__text-l">{{  $t(mainText) }}</p>
-        <p class="card__text-s" v-html="subText"></p>
+        <p class="card__text-s" v-html="formatText(subText)"></p>
       </template>
     </div>
   </div>
 </template>
 
 <script setup>
+
+const formatText = (text) => {
+  if (!text) return '';
+  return text.replace(/\n/g, '<br/>');
+};
+
+
 defineProps({
   image: String,
   redText: String,
