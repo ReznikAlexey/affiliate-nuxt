@@ -23,18 +23,18 @@
   },
   {
     "id": 1,
-    "image": "/banner-2.png",
-    "bonus": "До 400 баллов за заказ",
+    "image": "/coat.png",
+    "bonus": "bannerText.banner2.bonus",
     "type": "Маркетплейс",
-    "text": "Получайте мили за покупки",
+    "text": "bannerText.banner2.text",
     "title": "bannerText.banner2.title",
     "detail_text": {
-      "kz": "Онлайн косметика магазинімізде арнайы краса тәжірибесін таптырыңыз. Дәуірлі брендтердің топтық өнімдерін таныңыз, барлық оларды жоғары сапалы көріңіз, сіздің алдыңызда тұра алады. Орнатылатын кездесуімізде, өзіңізге арнайы жағдайлар мен жеңілдіктерге жетуіңіз мүмкін. Люкс және ықпалды төменде!",
-      "ru": "Откройте для себя мир красоты и заботы с предложениями от нашего партнера! Исследуйте широкий ассортимент продуктов от известных мировых брендов и получайте дополнительные бонусные баллы в программе Nomad Club с каждой покупкой! Почувствуйте роскошь и удобство уже сегодня!",
-      "en": "Discover the ultimate beauty experience with our partner. Explore a wide range of top-quality products from renowned brands, all conveniently available at your fingertips. Plus, earn bonus Nomad Club points with every purchase, bringing you closer to exclusive rewards and discounts. Experience luxury and convenience today!"
+      "kz": "Нейлоннан жасалған жеңіл қысқы күртке - жайлылықты ұнататындарға арналған ыңғайлы үлгі.<br/><br/>Тізеге дейінгі ұзындығы қозғалыс еркіндігін сақтауға мүмкіндік береді.<br/><br/>Жапсырма бүйір қалталары мен белдік күрткеге практикалық және функционалдық қасиет қосады. Күртке оңтүстік қысқа жарамды.<br/><br/>Құрамы: Нейлон<br/><br/>Салмағы: 252 г",
+      "ru": "Легкая зимняя куртка из нейлона — удобная модель для любителей комфорта.<br/><br/>Длина модели — до колена — позволяет сохранять мобильность.<br/><br/>Практичность и функциональность куртке добавляет нашивные боковые карманы и пояс. Куртка подходит для южной зимы.<br/><br/>Состав: Нейлон<br/><br/>Вес: 252 г",
+      "en": "Light winter nylon jacket - a comfortable model for comfort lovers.<br/><br/>The knee-length design allows for mobility.<br/><br/>Patch side pockets and a belt add practicality and functionality to the jacket. The jacket is suitable for southern winters.<br/><br/>Composition: Nylon<br/><br/>Weight: 252 g"
     },
     "size": "small",
-    "toShopUrl": "https://google.com"
+    "toShopUrl": "https://globalnomadswear.com/women/tproduct/792506629-829256527402-palto-chapan-s-poyasom?utm_source=air&utm_medium=cpa&utm_campaign=air-astana"
   },
   {
     "id": 2,
