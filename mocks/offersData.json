@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "image": "/banner-1.png",
+    "image": "/tshirt.png",
     "bonus": "bannerText.banner1.bonus",
     "type": "Доставка продуктов",
     "text": "9900 ₸",
@@ -9,7 +9,7 @@
     "detail_text": {
       "kz": "Global Nomads негізгі футболкалары - жайлылық пен стильдің үйлесімі.<br/><br/> Жоғары сапалы жұмсақ мақтадан жасалған, олар күнделікті киюге де, белсенді демалысқа да өте қолайлы.<br/><br/> Футболкалар бірнеше стильді түстерде ұсынылған: қою көк, ашық сұр, зәйтүн, қыша және қызыл қоңыр.<br/><br/> Әр футболка Қазақстанның бай мәдениетінен шабыт алған еркіндік рухын білдіреді. Өз тамырларын ұмытпай, жаһандық өмір салтына ұмтылатындар үшін тамаша таңдау.<br/><br/> Құрамы: Лайкрамен супрем (92% мақта, 8% лайкра)",
       "ru": "Базовые футболки Global Nomads – это воплощение комфорта и стиля.<br/><br/> Изготовлены из мягкого хлопка высокого качества, они идеально подходят как для повседневного ношения, так и для активного отдыха.<br/><br/> Футболки представлены в нескольких стильных расцветках: темно-синий, светло-серый, оливковый, горчичный и бордовый.<br/><br/> Каждая футболка несет дух свободы, вдохновленный богатством культуры Казахстана. Идеальный выбор для тех, кто стремится к глобальному образу жизни, не забывая о своих корнях.<br/><br/> Состав: Супрем с лайкрой (92% хлопок, 8% лайкра)",
-      "en": "Discover the ultimate beauty experience with our partner. Explore a wide range of top-quality products from renowned brands, all conveniently available at your fingertips. Plus, earn bonus Nomad Club points with every purchase, bringing you closer to exclusive rewards and discounts. Experience luxury and convenience today!"
+      "en": "Global Nomads basic t-shirts are the embodiment of comfort and style.<br/><br/> Made from soft, high-quality cotton, they are perfect for both everyday wear and active leisure.<br/><br/> The t-shirts come in several stylish colors: navy blue, light gray, olive, mustard, and burgundy.<br/><br/> Each t-shirt carries a spirit of freedom, inspired by the rich culture of Kazakhstan. An ideal choice for those who aspire to a global lifestyle while staying true to their roots.<br/><br/> Composition: Supreme with Lycra (92% cotton, 8% Lycra)"
     },
     "bonus_step": [
       "bannerText.banner1.bonusStep1",
@@ -19,7 +19,7 @@
       "bannerText.banner1.bonusStep5"
     ],
     "size": "small",
-    "toShopUrl": "https://google.com"
+    "toShopUrl": "https://globalnomadswear.com/women/tproduct/792506629-669831061432-bazovie-futbolki-global-nomads?utm_source=air&utm_medium=cpa&utm_campaign=air-astana"
   },
   {
     "id": 1,
