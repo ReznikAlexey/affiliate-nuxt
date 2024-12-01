@@ -17,7 +17,7 @@
       <template v-else>
         <p class="card__red-text">{{ redText }}</p>
         <p class="card__text-l">{{  $t(mainText) }}</p>
-        <p class="card__text-s">{{ subText }}</p>
+        <p class="card__text-s" v-html="subText"></p>
       </template>
     </div>
   </div>
