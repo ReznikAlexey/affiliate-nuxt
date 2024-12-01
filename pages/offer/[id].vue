@@ -4,6 +4,8 @@
       <div class="flex-content"></div>
       <h2 class="main-title-m" v-if="currentOffers.title">
         {{ $t(currentOffers.title) }}
+      <h2 class="main-title-m" v-if="currentOffers.bonus">
+        {{ $t(currentOffers.bonus) }}
       </h2>
       <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text" v-html="currentOffers.detail_text[$i18n.locale]">
       </p>
