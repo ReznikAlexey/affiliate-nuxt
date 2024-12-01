@@ -28,7 +28,7 @@
           :image=slide.image
           :red-text="isTranslationKey(slide.bonus) ? $t(slide.bonus) : slide.bonus"
           :main-text=slide.title
-          :sub-text=slide.text
+          :sub-text="isTranslationKey(slide.text) ? $t(slide.text) : slide.text"
           :isLoading="isLoading"
           @click="openDetailPage(slide, 'offer')"
       ></CardCurrentOffer>
