@@ -4,8 +4,13 @@
     "image": "/banner-1.png",
     "bonus": "bannerText.banner1.bonus",
     "type": "Доставка продуктов",
-    "text": "Скидка 50% на первый заказ",
+    "text": "9900 ₸",
     "title": "bannerText.banner1.title",
+    "detail_text": {
+      "kz": "Global Nomads негізгі футболкалары - жайлылық пен стильдің үйлесімі.<br/><br/> Жоғары сапалы жұмсақ мақтадан жасалған, олар күнделікті киюге де, белсенді демалысқа да өте қолайлы.<br/><br/> Футболкалар бірнеше стильді түстерде ұсынылған: қою көк, ашық сұр, зәйтүн, қыша және қызыл қоңыр.<br/><br/> Әр футболка Қазақстанның бай мәдениетінен шабыт алған еркіндік рухын білдіреді. Өз тамырларын ұмытпай, жаһандық өмір салтына ұмтылатындар үшін тамаша таңдау.<br/><br/> Құрамы: Лайкрамен супрем (92% мақта, 8% лайкра)",
+      "ru": "Базовые футболки Global Nomads – это воплощение комфорта и стиля.<br/><br/> Изготовлены из мягкого хлопка высокого качества, они идеально подходят как для повседневного ношения, так и для активного отдыха.<br/><br/> Футболки представлены в нескольких стильных расцветках: темно-синий, светло-серый, оливковый, горчичный и бордовый.<br/><br/> Каждая футболка несет дух свободы, вдохновленный богатством культуры Казахстана. Идеальный выбор для тех, кто стремится к глобальному образу жизни, не забывая о своих корнях.<br/><br/> Состав: Супрем с лайкрой (92% хлопок, 8% лайкра)",
+      "en": "Discover the ultimate beauty experience with our partner. Explore a wide range of top-quality products from renowned brands, all conveniently available at your fingertips. Plus, earn bonus Nomad Club points with every purchase, bringing you closer to exclusive rewards and discounts. Experience luxury and convenience today!"
+    },
     "bonus_step": [
       "bannerText.banner1.bonusStep1",
       "bannerText.banner1.bonusStep2",
