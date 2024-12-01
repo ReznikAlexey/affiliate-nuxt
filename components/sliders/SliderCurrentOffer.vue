@@ -26,7 +26,7 @@
     >
       <CardCurrentOffer
           :image=slide.image
-          :red-text=slide.bonus
+          :red-text="isTranslationKey(slide.bonus) ? $t(slide.bonus) : slide.bonus"
           :main-text=slide.title
           :sub-text=slide.text
           :isLoading="isLoading"

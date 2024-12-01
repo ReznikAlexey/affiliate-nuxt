@@ -4,7 +4,6 @@
       <div class="flex-content"></div>
       <h2 class="main-title-m" v-if="currentOffers.title">
         {{ $t(currentOffers.title) }}
-        {{ $t(currentOffers.bonus) }}
       </h2>
       <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text" v-html="currentOffers.detail_text[$i18n.locale]">
       </p>
@@ -147,6 +146,12 @@ const { t } = useI18n()
 const state = ref({
   number: "",
 });
+
+// Add the isTranslationKey function here
+const isTranslationKey = (text) => {
+  return text && typeof text === 'string' && text.startsWith('bannerText.');
+};
+
 
 const validate = () => {
   const errors = [];
