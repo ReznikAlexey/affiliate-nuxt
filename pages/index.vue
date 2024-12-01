@@ -2,7 +2,6 @@
   <div class="page-content af-home">
     <div class="container">
       <h1 class="main-title">{{ $t("main.title") }}</h1>
-      <h1 class="main-title">{{ $t("main.bonus") }}</h1>
       <div class="current-offers">
         <div class="offers">
           <ul class="main-row-2">
