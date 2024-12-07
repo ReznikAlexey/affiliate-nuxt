@@ -15,11 +15,9 @@
                 <div class="offers__card">
                   <img :src="offer.image" alt="offer" :key="offer.text">
                 </div>
-                  <div class="offers__card-text">
+                  <div class="offers__card-info">
                     <p class="af-text-m" v-html="offer.detail_text[$i18n.locale]" />
                   </div>
-                  </div>
-                </div>
               </li>
             </template>
             <template v-else>
