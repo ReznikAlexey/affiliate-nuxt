@@ -15,8 +15,8 @@
                 <div class="offers__card">
                   <img :src="offer.image" alt="offer" :key="offer.text">
                 </div>
-                <div class="offers__card-text">
-                   <p class="af-text-m" v-html="offer.detail_text[$i18n.locale]" />
+                <div class="offers__card-text-container">
+                  <p class="af-text-m" v-html="offer.detail_text[$i18n.locale]" />
                 </div>
               </li>
             </template>
@@ -67,6 +67,41 @@ const openDetailPage = async (param, pageName) => {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.offers__card-item {
+  display: flex;
+  flex-direction: column;
+}
 
-</style>
+.offers__card {
+  padding-top: 55%;
+  position: relative;
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  border-radius: size(10px);
+  overflow: hidden;
+  
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.offers__card-text-container {
+  padding: size(20px);
+  background: #fff;
+  
+  .af-text-m {
+    font-size: size(18px);
+    line-height: 135%;
+    color: #333;
+  }
+}
