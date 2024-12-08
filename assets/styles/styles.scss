@@ -199,6 +199,7 @@ input[type=number] {
     text-align: center; /* Center the text below the card */
   }
 }
+/*
 .offers__card-info {
   padding: size(30px);
   position: absolute;
@@ -208,12 +209,12 @@ input[type=number] {
   height: 100%;
   background-color: $darkGrey;
   transform: none; /*translate3d(0, 100%, 0); edited on 12192024*/
-  border-radius: size(13px);
+  /*border-radius: size(13px);
   transition: none; /*transform .5s;edited on 12192024 */
-  .af-text-m {
+ /* .af-text-m {
     color: #fff;
   }
-}
+}*/
 .points-content {
   margin-top: size(40px);
   display: flex;
