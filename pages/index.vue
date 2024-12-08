@@ -105,3 +105,5 @@ const openDetailPage = async (param, pageName) => {
     color: #333;
   }
 }
+
+</style>
