@@ -16,7 +16,7 @@
                   <img :src="offer.image" alt="offer" :key="offer.text">
                 </div>
                 <div class="offers__card-text-container">
-                  <p class="af-text-m" v-html="offer.detail_text[$i18n.locale]" />
+                  <p class="af-text-m" v-html="offer.preview_text[$i18n.locale]"  />
                 </div>
               </li>
             </template>
