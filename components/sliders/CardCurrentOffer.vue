@@ -75,18 +75,18 @@ defineProps({
   row-gap: size(10px);
 }
 .card__red-text {
-  font-size: size(12px);
+  font-size: size(14px);
   font-weight: 500;
   line-height: 135%;
   color: #c20303;
 }
 .card__text-l {
-  font-size: size(12px);
+  font-size: size(14px);
   font-weight: 500;
   line-height: 135%;
 }
 .card__text-s {
-  font-size: size(12px);
+  font-size: size(14px);
   font-weight: 500;
   line-height: 135%;
   color: #506270;

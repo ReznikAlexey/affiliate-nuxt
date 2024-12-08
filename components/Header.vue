@@ -147,7 +147,7 @@ const languages = [{
 }
 .nav-link {
   padding: 0 size(12px);
-  font-size: size(14px);
+  font-size: size(16px);
   color: $darkBlue;
   font-style: normal;
   font-weight: 700;

@@ -102,6 +102,7 @@ input[type=number] {
   font-size: size(18px);
   font-weight: 500;
   line-height: 135%;
+  text-align: justify;
 }
 .af-text-m-grey {
   font-size: size(12px);
@@ -251,7 +252,7 @@ input[type=number] {
     border: 1px solid $brown;
     width: size(20px);
     height: size(20px);
-    font-size: size(12px);
+    font-size: size(14px);
   }
 }
 .af-offer-text {
