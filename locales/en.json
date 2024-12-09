@@ -42,7 +42,7 @@
 
      "banner3": {
       "title": "SPORTS SUIT STONE WASHED",
-      "text": "24 990 ₸ \n\nStylish hoodies and pants made from Stone Washed processed footer fabric. A comfortable set for walks and meeting friends.",
+      "text": "24 990 ₸ \n\nStylish hoodies and pants made from Stone Washed processed footer fabric.",
       "bonus":"For every 200 KZT spent you will receive 1 Point",
       "bonusStep1": "Insert your NC membership number",
       "bonusStep2": "Go to the partner shop",
@@ -50,10 +50,15 @@
       "bonusStep4": "Make a purchase on the partner's website",
       "bonusStep5": "Points will be added to your account"
     },
+
     "banner4": {
-      "title": "Make up and skin care",
-      "detailText": "Experience the seamless convenience of procuring premium-grade supplements and vitamins online! Immerse yourself in our carefully curated selection, meticulously crafted to elevate your health and vitality. Accumulate rewards with each purchase, unveiling exclusive perks and savings. Begin your journey towards optimal health today and indulge in the sophistication of shopping with us!"
+      "title": "Become a Nomad Club Member and Explore a Wealth of Rewards",
+      "text": "",
+      "bonus":"NOT A NOMADCLUB MEMBER YET?"
     },
+
+   
+
     "banner5": {
       "title": "Nomad Club: Exclusive Member Benefits",
       "detailText": "Welcome to Nomad Club, Air Astana’s loyalty programme designed to reward and recognize our most valued travelers.  \nWe believe your loyalty deserves to be celebrated with exclusive benefits tailored just for you.Membership Tiers Nomad Club offers four tiers of membership: Blue, Silver, Gold, and Diamond. Each tier provides you with distinct advantages that enhance your travel experience. Upon joining the programme, all members start at the Blue tier. As you travel with Air Astana and accumulate tier points, you will have the opportunity to advance through the tiers and unlock more privileges. To qualify for Silver, Gold, or Diamond membership, you must meet the specified criteria within a single calendar year (from January 1 to December 31). Once you meet these requirements, you will receive a unique membership card and access to an array of additional benefits."
