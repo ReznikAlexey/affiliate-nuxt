@@ -73,6 +73,7 @@ defineProps({
   display: flex;
   flex-direction: column;
   row-gap: size(10px);
+  text-align: justify;
 }
 .card__red-text {
   font-size: size(14px);
