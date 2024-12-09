@@ -7,7 +7,7 @@
       </h2>
       <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text" v-html="currentOffers.detail_text[$i18n.locale]">
       </p>
-      <div class="points-content" v-if="currentOffers.showPointsContent">
+      <div class="points-content"v-if="currentOffers.showPointsContent">
         <h3 class="main-title-s">{{ $t("main.earnPointsEnterYourCard") }}</h3>
         <ol class="af-ol-list" v-if="currentOffers.bonus_step">
           <li v-for="item in currentOffers.bonus_step" class="af-ol-item">
@@ -237,7 +237,6 @@ const cardAuthorizationFunc = async (memberId) => {
 
 };
 
-
 const currentOffers = ref([]);
 
 onMounted(async () => {
@@ -254,9 +253,6 @@ onMounted(async () => {
     console.error("Failed to fetch current offer:", error);
   }
 });
-
-
-
 
 
 </script>
