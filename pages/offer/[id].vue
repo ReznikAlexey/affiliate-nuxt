@@ -7,7 +7,7 @@
       </h2>
       <p class="af-text-m af-offer-text" v-if="currentOffers.detail_text" v-html="currentOffers.detail_text[$i18n.locale]">
       </p>
-      <div class="points-content"v-if="currentOffers.showPointsContent">
+      <div v-if="currentOffers.showPointsContent" class="points-content">
         <h3 class="main-title-s">{{ $t("main.earnPointsEnterYourCard") }}</h3>
         <ol class="af-ol-list" v-if="currentOffers.bonus_step">
           <li v-for="item in currentOffers.bonus_step" class="af-ol-item">
@@ -41,6 +41,19 @@
           ></MainButton>
         </div>
       </div>
+
+         <!-- Show external button for excluded offers -->
+      <div v-else>
+        <MainButton
+          type="button"
+          :text="$t('main.learnMore')"
+          @click="openExternalLink(currentOffers.externalUrl)"
+          style="width: 100%;"
+        />
+      </div>
+
+
+      
 
       <div class="other-offers">
         <h3 class="main-title-s">{{ $t("card.anotherOffer") }}</h3>
@@ -237,22 +250,36 @@ const cardAuthorizationFunc = async (memberId) => {
 
 };
 
+
 const currentOffers = ref([]);
 
 onMounted(async () => {
   try {
     const offerId = Number(route.params.id); // Ensure the ID is a valid number
     currentOffers.value = await fetchCurrentOfferByIdData(offerId);
-    
-    // Define the IDs of the offers to exclude from showing the points-content
-    const excludedOfferIds = [3, 4];
 
-    // Set showPointsContent to false if the offer ID is in the excluded list
+    // Define the IDs of offers to exclude from points-content
+    const excludedOfferIds = [3, 4]; // Replace with the actual IDs
+
+    // Determine whether to show points-content or external button
     currentOffers.value.showPointsContent = !excludedOfferIds.includes(offerId);
+
+    // Assign external URL for excluded offers
+    if (!currentOffers.value.showPointsContent) {
+      currentOffers.value.externalUrl = currentOffers.value.customUrl || 'https://airastana.com/nomad-club/nomad-club-programme';
+    }
   } catch (error) {
     console.error("Failed to fetch current offer:", error);
   }
 });
+
+const openExternalLink = (url) => {
+  if (url) {
+    window.open(url, '_blank'); // Open in a new tab
+  } else {
+    console.error("External URL is not defined.");
+  }
+};
 
 
 </script>
