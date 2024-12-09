@@ -237,7 +237,7 @@ input[type=number] {
   display: flex;
   align-items: center;
   counter-increment: item;
-  font-size: size(14px);
+  font-size: size(16px);
   & + & {
     margin-top: size(8px);
   }
@@ -252,7 +252,7 @@ input[type=number] {
     border: 1px solid $brown;
     width: size(20px);
     height: size(20px);
-    font-size: size(14px);
+    font-size: size(16px);
   }
 }
 .af-offer-text {
