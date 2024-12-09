@@ -43,23 +43,30 @@
     "size": "small",
     "toShopUrl": "https://globalnomadswear.com/men/tproduct/792507046-185271900782-kardigan-na-pugovitsah?utm_source=air&utm_medium=cpa&utm_campaign=air-astana"
   },
+
   {
     "id": 2,
-    "image": "/banner-3.png",
-    "bonus": "До 400 баллов за заказ",
+    "image": "/suit.png",
+    "bonus": "bannerText.banner3.bonus",
     "type": "Маркетплейс",
-    "text": "Получайте мили за покупки",
+    "text": "bannerText.banner3.text",
     "title": "bannerText.banner3.title",
     "detail_text": {
-      "kz": "Өзіңізді таңғалатын кезек, рюкзактар мен саяхат құралдарының онлайн таңдауы арқылы кураторлық коллекциямыздан таңдаңыз. Багаж мен аксессуарлардың еңбекқор бағдарламасымен таңдаңыз және сапалы. Келесі саяхатқа дайынланғанда, өзіңізді көрсете алу үшін көздеріңізді ашыңыз. Жаңа приключениеңіздің өзгерістерін ашуды, сатып алумен баллдарды біріктіру арқылы жасаңыз, біздің дегенмен лоялдылық бағдарламамен елімді негізгі көмектерді ашыңыз. Бізбен бірге әділетті және ықпалды саяхат етіңіз.",
-      "ru": "Отправляйтесь в путешествие со вкусом! Поднимите ваше путешествие на новый уровень с нашим премиальным ассортиментом багажа и аксессуаров, тщательно разработанных как для функциональности, так и стиля. Готовясь к следующему приключению, накапливайте баллы с каждой покупкой через нашу программу лояльности Номад клуб. Путешествуйте с элегантностью и удобством вместе с нами.",
-      "en": "Embark on your journey with sophistication by browsing our curated collection of suitcases, backpacks, and travel essentials online. Elevate your travel experience with our premium range of luggage and accessories, meticulously crafted for both functionality and style. As you prepare for your next adventure, accumulate points with each purchase, unlocking exclusive rewards and privileges through our loyalty program. Travel in elegance and convenience with us."
+      "kz": "Стильді Stone Washed өңдеуі бар футерден жасалған худи мен шалбар. Серуендеуге және достармен кездесуге арналған ыңғайлы жиынтық.<br><br>Худиді сатып алғанда, сізге шалбар сыйлыққа беріледі.<br><br>Әрбір 200 KZT үшін сіз 1 балл аласыз.<br><br>Құрамы: Футер (3 қабат)",
+      "ru": "Стильные худи и брюки из футера с обработкой Stone Washed. Удобный комплект для прогулок и встреч с друзьями.<br><br>При покупке худи вы получаете брюки в подарок.<br><br>За каждые 200 KZT вы получите 1 балл.<br><br>Состав: Футер (3-нить)",
+      "en": "Stylish hoodies and pants made from Stone Washed processed footer fabric. A comfortable set for walks and meeting friends.<br><br>When you buy a hoodie, you get the pants as a gift.<br><br>For every 200 KZT, you will receive 1 point.<br><br>Composition: Footer (3-thread)"
     },
-    
-    
+    "bonus_step": [
+      "bannerText.banner3.bonusStep1",
+      "bannerText.banner3.bonusStep2",
+      "bannerText.banner3.bonusStep3",
+      "bannerText.banner3.bonusStep4",
+      "bannerText.banner3.bonusStep5"
+    ],
     "size": "small",
-    "toShopUrl": "https://google.com"
+    "toShopUrl": "https://globalnomadswear.com/women/tproduct/792506629-823494558042-hudi-i-bryuki-stone-washed?utm_source=air&utm_medium=cpa&utm_campaign=air-astana"
   },
+
  {
     "id": 3,
     "image": "/banner-4.png",

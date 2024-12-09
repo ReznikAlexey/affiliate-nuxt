@@ -20,7 +20,7 @@
   "bannerText": {
     "banner1": {
       "title": "BASIC T-SHIRT",
-      "text": "9900 ₸ \n\nGlobal Nomads basic t-shirts are the embodiment of comfort and style. Made from soft, high-quality cotton, they are perfect for both everyday wear and active leisure.",
+      "text": "9900 ₸ \n\nGlobal Nomads basic t-shirts are the embodiment of comfort and style. Made from soft, high-quality cotton.",
       "bonus":"For every 200 KZT spent you will receive 1 Point",
       "bonusStep1": "Insert your NC membership number",
       "bonusStep2": "Go to the partner shop",
@@ -38,9 +38,17 @@
       "bonusStep4": "Make a purchase on the partner's website",
       "bonusStep5": "Points will be added to your account"
     },
-    "banner3": {
-      "title": "Travel suitcases and accessories",
-      "detailText": "Embark on your journey with sophistication by browsing our curated collection of suitcases, backpacks, and travel essentials online. Elevate your travel experience with our premium range of luggage and accessories, meticulously crafted for both functionality and style. As you prepare for your next adventure, accumulate points with each purchase, unlocking exclusive rewards and privileges through our loyalty program. Travel in elegance and convenience with us."
+
+
+     "banner3": {
+      "title": "SPORTS SUIT STONE WASHED",
+      "text": "24 990 ₸ \n\nStylish hoodies and pants made from Stone Washed processed footer fabric. A comfortable set for walks and meeting friends.",
+      "bonus":"For every 200 KZT spent you will receive 1 Point",
+      "bonusStep1": "Insert your NC membership number",
+      "bonusStep2": "Go to the partner shop",
+      "bonusStep3": "Enable cookies",
+      "bonusStep4": "Make a purchase on the partner's website",
+      "bonusStep5": "Points will be added to your account"
     },
     "banner4": {
       "title": "Make up and skin care",
