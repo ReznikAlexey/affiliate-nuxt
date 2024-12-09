@@ -49,7 +49,7 @@
             type="button"
             :text="$t('main.learnMore')"
             @click="openExternalLink(currentOffers.externalUrl)"
-            class="styled-button"
+            class="half-width-button"
 
           />
         </div>
