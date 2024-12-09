@@ -48,7 +48,8 @@
           type="button"
           :text="$t('main.learnMore')"
           @click="openExternalLink(currentOffers.externalUrl)"
-          style="width: 100%;"
+          style="width: 200px; margin: 20px auto 0; display: block;"
+
         />
       </div>
 
