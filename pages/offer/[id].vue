@@ -44,13 +44,15 @@
 
          <!-- Show external button for excluded offers -->
       <div v-else>
-        <MainButton
-          type="button"
-          :text="$t('main.learnMore')"
-          @click="openExternalLink(currentOffers.externalUrl)"
-          style="width: 200px; margin: 20px auto 0; display: block;"
+        <div class="button-container">
+          <MainButton
+            type="button"
+            :text="$t('main.learnMore')"
+            @click="openExternalLink(currentOffers.externalUrl)"
+            class="styled-button"
 
-        />
+          />
+        </div>
       </div>
 
 

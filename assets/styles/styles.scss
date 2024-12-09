@@ -451,5 +451,30 @@ input[type=number] {
   }
 }
 
+.styled-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4a373; /* Match the background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding for size */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Match font size */
+  font-weight: 500; /* Match weight */
+  cursor: pointer;
+  width: auto; /* Prevent it from spanning the full width */
+  margin-top: 20px; /* Add space above the button */
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c78b62; /* Slightly darker on hover */
+  }
+}
+
+.button-container {
+  text-align: left; /* Align to the left, adjust as needed */
+  margin-top: 20px; /* Add space above the container */
+}
 
 
