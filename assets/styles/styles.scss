@@ -87,6 +87,7 @@ input[type=number] {
   font-size: size(42px);
   font-weight: 500;
   line-height: 135%;
+  color: $darkBlue;
 }
 .main-title-m {
   font-size: size(32px);
@@ -221,6 +222,7 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   row-gap: size(20px);
+  text-align: justify;
 }
 .points-content__footer {
   display: grid;
