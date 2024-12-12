@@ -85,11 +85,13 @@ defineProps({
   font-size: size(14px);
   font-weight: 500;
   line-height: 135%;
+  color: $darkBlue; 
 }
 .card__text-s {
   font-size: size(14px);
   font-weight: 500;
   line-height: 135%;
-  color: #506270;
+  color: $clouds
+  
 }
 </style>
