@@ -79,7 +79,7 @@ defineProps({
   font-size: size(14px);
   font-weight: 500;
   line-height: 135%;
-  color: #c20303;
+  color: $redearth;
 }
 .card__text-l {
   font-size: size(14px);

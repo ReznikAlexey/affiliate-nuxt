@@ -93,22 +93,26 @@ input[type=number] {
   font-size: size(32px);
   font-weight: 500;
   line-height: 135%;
+  color: $darkBlue;
 }
 .main-title-s {
   font-size: size(22px);
   font-weight: 500;
   line-height: 135%;
+  color: $darkBlue;
 }
 .af-text-m {
   font-size: size(18px);
   font-weight: 500;
   line-height: 135%;
   text-align: justify;
+  color:$clouds;
 }
 .af-text-m-grey {
   font-size: size(12px);
   font-weight: 500;
   line-height: 135%;
+  color:$clouds;
 }
 .tooltip-text-reset {
   overflow: unset;
@@ -336,9 +340,11 @@ input[type=number] {
 .mobile-ver {
   .main-title {
     font-size: size(28px);
+    color:$darkBlue;
   }
   .af-text-m {
     font-size: size(16px);
+    color:$clouds;
   }
   .current-offers {
     margin-top: size(22px);
@@ -346,6 +352,7 @@ input[type=number] {
   }
   .main-title-m {
     font-size: size(22px);
+    color:$darkBlue;
   }
   .main-row-2 {
     .offers__card-item {
@@ -413,6 +420,7 @@ input[type=number] {
   }
   .main-title-s {
     font-size: size(18px);
+    color:$darkBlue;
   }
   .af-ol-item {
     font-size: size(12px);
