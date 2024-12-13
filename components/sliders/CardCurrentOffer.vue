@@ -50,6 +50,8 @@ defineProps({
   border: 1px solid $lightGrey;
   cursor: pointer;
   width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
 .card-image-wrapper {
   width: 100%;
@@ -74,6 +76,7 @@ defineProps({
   flex-direction: column;
   row-gap: size(10px);
   text-align: justify;
+  flex-grow: 1;
 }
 .card__red-text {
   font-size: size(14px);
