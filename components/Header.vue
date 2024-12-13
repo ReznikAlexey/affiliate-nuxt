@@ -106,7 +106,7 @@ const languages = [{
   name: 'Русский',
   value: 'ru'
 }, {
-  name: 'Казахский',
+  name: 'Қазақ',
   value: 'kz'
 }, {
   name: 'English',

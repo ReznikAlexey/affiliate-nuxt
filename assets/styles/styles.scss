@@ -244,6 +244,7 @@ input[type=number] {
   align-items: center;
   counter-increment: item;
   font-size: size(16px);
+  color: $clouds;
   & + & {
     margin-top: size(8px);
   }
