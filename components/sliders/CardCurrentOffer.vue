@@ -50,7 +50,7 @@ defineProps({
   border: 1px solid $lightGrey;
   cursor: pointer;
   width: 100%;
-  height: 400px;
+  height: 300px;
   overflow: hidden;
 }
 .card-image-wrapper {
