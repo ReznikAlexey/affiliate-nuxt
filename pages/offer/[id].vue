@@ -175,11 +175,11 @@ const onSubmit = async (event) => {};
 const isUserCardAuth = computed(() => userStore.getIsUserCardAuth);
 
 const saveToFirebase = async () => {
-  let memberId = state.value.number
+  let memberId = state.value.number;
   try {
     const db = getDatabase();
-    let encrypted = CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString()
-    console.log(memberId)
+    let encrypted = CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString();
+    console.log(memberId);
 
     await set(fireRef(db, "memberID/" + route.params.id + "/" + memberId), {
       encrypted,
@@ -188,11 +188,17 @@ const saveToFirebase = async () => {
       toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}`
     });
 
-    window.open(`${currentOffers.value.toShopUrl}?cid=${encrypted}`, '_blank')
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (isSafari) {
+      window.location.href = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
+    } else {
+      window.open(`${currentOffers.value.toShopUrl}?cid=${encrypted}`, '_blank');
+    }
   } catch (error) {
     console.error("Error adding document: ", error);
   }
 };
+
 
 const cardAuthorizationFunc = async (memberId) => {
   loading.value = true
