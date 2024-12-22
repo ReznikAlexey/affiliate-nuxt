@@ -142,7 +142,7 @@ import MainButton from "../../components/buttons/MainButton.vue";
 
 import { useUserStore } from "../../stores/user";
 import { fetchCurrentOfferByIdData } from "../../services/offersDetailService";
-import { getDatabase, ref as fireRef, set } from "firebase/database";
+import { getDatabase, ref as fireRef, set, push } from "firebase/database";
 import { useI18n } from "vue-i18n";
 
 const toast = useToast();
