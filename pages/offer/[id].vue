@@ -181,19 +181,12 @@ const saveToFirebase = async () => {
     let encrypted = CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString();
     console.log(memberId);
 
-      await push(fireRef(db,  "clickLogs/" + route.params.id), {
-        memberId: memberId, // Original member ID
-        encrypted: encrypted, // Encrypted ID
-        timestamp: moment().format(), // Current timestamp
-        toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}`
-      });
-
-  //  await set(fireRef(db, "memberID/" + route.params.id + "/" + memberId), {
-   //   encrypted,
-   //   timestamp: moment().format(),
-   //   memberId,
- //     toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}`
-  //  });
+    await push(fireRef(db, "clickLogs/" + route.params.id), {
+      encrypted,
+      timestamp: moment().format(),
+      memberId,
+      toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}`
+    });
 
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (isSafari) {
