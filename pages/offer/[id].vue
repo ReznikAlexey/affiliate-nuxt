@@ -185,7 +185,7 @@ const saveToFirebase = async () => {
         memberId: memberId, // Original member ID
         encrypted: encrypted, // Encrypted ID
         timestamp: moment().format(), // Current timestamp
-        toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}
+        toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}`
       });
 
   //  await set(fireRef(db, "memberID/" + route.params.id + "/" + memberId), {
