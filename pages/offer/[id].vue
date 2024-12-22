@@ -181,7 +181,7 @@ const saveToFirebase = async () => {
     let encrypted = CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString();
     console.log(memberId);
 
-    await set(fireRef(db, "memberID/" + route.params.id + "/" + memberId), {
+    await push(fireRef(db, "clickLogs/" + route.params.id), {
       encrypted,
       timestamp: moment().format(),
       memberId,
