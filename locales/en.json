@@ -22,7 +22,7 @@
     "banner1": {
       "title": "BASIC T-SHIRT",
       "text": "9900 ₸ \n\nGlobal Nomads basic t-shirts are the embodiment of comfort and style. ",
-      "bonus":"For every 200 KZT spent you will receive 1 Point",
+      "bonus":"For every 100 KZT spent you will receive 1 Point",
       "bonusStep1": "Insert your NC membership number",
       "bonusStep2": "Go to the partner shop",
       "bonusStep3": "Enable cookies",
@@ -32,7 +32,7 @@
     "banner2": {
       "title": "CARDIGAN",
       "text": "33 990  ₸ \n\nStylish cardigan with an original design arranged in lines.",
-      "bonus":"For every 200 KZT spent you will receive 1 Point",
+      "bonus":"For every 100 KZT spent you will receive 1 Point",
       "bonusStep1": "Insert your NC membership number",
       "bonusStep2": "Go to the partner shop",
       "bonusStep3": "Enable cookies",
@@ -44,7 +44,7 @@
      "banner3": {
       "title": "SPORTS SUIT STONE WASHED",
       "text": "24 990 ₸ \n\nStylish hoodies and pants made from Stone Washed processed footer fabric.",
-      "bonus":"For every 200 KZT spent you will receive 1 Point",
+      "bonus":"For every 100 KZT spent you will receive 1 Point",
       "bonusStep1": "Insert your NC membership number",
       "bonusStep2": "Go to the partner shop",
       "bonusStep3": "Enable cookies",
@@ -61,7 +61,7 @@
    
 
     "banner5": {
-      "title": "Nomad Club: Exclusive Member Benefits",
+      "title": "Dimash Kudaibergen and Global Nomads",
       "detailText":""
     },
     "banner6": {

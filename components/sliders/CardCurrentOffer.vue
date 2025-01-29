@@ -51,7 +51,7 @@ defineProps({
   cursor: pointer;
   width: 100%;
   height: 270px;
-  overflow: hidden;
+  overflow: visible;
 }
 .card-image-wrapper {
   width: 100%;

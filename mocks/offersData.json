@@ -88,20 +88,27 @@
   
   {
     "id": 4,
-    "image": "/new-big-banner-1.png",
+    "image": "/dimash.png",
     "detail_text": {
-    "kz": "Біздің онлайн сауда жасау платформамыз Nomad Club Shop-қа қош келдіңіз – сауда жасаңыз және ұпайлар жинаңыз!<br><br>Nomad Club Shop – бұл Nomad Club қатысушылары үшін арнайы жасалған эксклюзивті онлайн платформа. Мұнда сіз сауда жасап, ұпай жинай аласыз. Әр сатып алуыңыз сізді Air Astana-мен ұмытылмас саяхаттарға жақындатады.<br><br>Өмір салтыңыз бен саяхат армандарыңызға сай келетін өнімдер ассортиментін зерттеңіз. Бүгіннен бастап онлайн сауда жасап, Nomad Club бағдарламасының барлық артықшылықтарын пайдаланыңыз – бізбен бірге әрбір сатып алу сізді жаңа мүмкіндіктерге жетелейді!",
-    "ru": "Добро пожаловать в наш онлайн магазин Nomad Club Shop – Покупайте и зарабатывайте баллы!<br><br>Nomad Club Shop – это эксклюзивная платформа для участников Nomad Club, предлагающая возможность заработка дополнительных баллов. Каждая покупка приближает вас к незабываемым путешествиям на Air Astana.<br><br>Исследуйте наш ассортимент товаров, который соответствует вашему образу жизни и путешествиям. Начните покупки уже сегодня и максимально используйте преимущества Вашего участия в Nomad Club – ведь с нами каждая покупка приближает вас к новым возможностям!",
-    "en": "Welcome to our online Nomad Club Shop – Shop & Earn Points!<br><br>Nomad Club Shop is your exclusive platform designed for Nomad Club members, offering a shopping experience with the added benefit of earning points. Every purchase brings you closer to exciting travels on Air Astana.<br><br>Explore our range of products that align with your lifestyle and travel aspirations. Start shopping today and make the most of your Nomad Club experience – because with us, every purchase takes you further!"
+    "kz": "Қазақ бренді Global Nomads пен музыкант Димаш Құдайберген бірлесіп жасаған киім коллекциясы Астанадағы оның ауқымды концертінде таныстырылды. <br><br> Оған футболкалар, худилер, лонгсливтер және Димаштың Stranger, Be with Me, Your Love сияқты ән атауларымен безендірілген стильді қара-ақ гаммадағы аксессуарлар кіреді. <br><br> Коллекцияның орталық бейнесі – қазақ халқының бостандығы мен күшін бейнелейтін Самұрық құсының қанаттарымен бейнеленген Димаш. <br><br> Бұл Global Nomads пен Димаш бірлесіп жасаған киімдерін ұшуға және ұзақ сапарларға ыңғайлы ғана емес, сонымен бірге ұлттық бірегейлікті бейнелейтін етеді.",
+    "ru": "Казахстанский бренд Global Nomads и музыкант Димаш Кудайберген создали совместную коллекцию одежды, представленную на его грандиозном концерте в Астане. <br><br> Коллекция включает футболки, худи, лонгсливы и аксессуары в стильной черно-белой гамме с названиями песен Димаша, таких как Stranger, Be with Me, Your Love, и другие. <br><br> Центральный образ коллекции — Димаш с крыльями птицы Самрук, символизирующей свободу и силу казахского народа. <br><br> Одежда Global Nomads, созданная в коллаборации с Димашем, идеальна для полетов и дальних поездок, воплощая комфорт и национальную идентичность.",
+    "en": "The Kazakh brand Global Nomads and musician Dimash Kudaibergen have created a joint clothing collection, unveiled at his grand concert in Astana. <br><br> Featuring T-shirts, hoodies, long sleeves, and accessories in a stylish black-and-white palette with the names of Dimash’s songs, such as Stranger, Be with Me, Your Love, and more. <br><br> The central image of the collection is Dimash with the wings of the Samruk bird, symbolizing the freedom and strength of the Kazakh people. <br><br> Global Nomads clothing, created in collaboration with Dimash, is perfect for flights and long journeys, embodying both comfort and national identity."
   },
     "preview_text": {
-    "kz": "Nomad Club Shop – бұл Nomad Club қатысушылары үшін арнайы жасалған эксклюзивті онлайн платформа.",
-    "ru": "Nomad Club Shop – это эксклюзивная платформа для участников Nomad Club, предлагающая возможность заработка дополнительных баллов.",
-    "en": "Nomad Club Shop is your exclusive platform designed for Nomad Club members, offering a shopping experience with the added benefit of earning points."
+    "kz": "Қазақ бренді Global Nomads пен музыкант Димаш Құдайберген бірлесіп киім коллекциясын жасап шығарды, ол Астанадағы оның ауқымды концертінде таныстырылды.",
+    "ru": "Казахстанский бренд Global Nomads и музыкант Димаш Кудайберген создали совместную коллекцию одежды, представленную на его грандиозном концерте в Астане.",
+    "en": "The Kazakh brand Global Nomads and musician Dimash Kudaibergen have created a joint clothing collection, unveiled at his grand concert in Astana."
   },
+    "bonus_step": [
+      "bannerText.banner1.bonusStep1",
+      "bannerText.banner1.bonusStep2",
+      "bannerText.banner1.bonusStep3",
+      "bannerText.banner1.bonusStep4",
+      "bannerText.banner1.bonusStep5"
+    ],
     "title": "bannerText.banner5.title",
     "size": "big",
-    "toShopUrl": "https://airastana.com/nomad-club/nomad-club-programme"
+    "toShopUrl": "https://globalnomadswear.com/dimash?utm_source=air&utm_medium=cpa&utm_campaign=air-astana"
   },
   {
     "id": 5,
