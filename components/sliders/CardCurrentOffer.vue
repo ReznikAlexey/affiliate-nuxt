@@ -65,12 +65,14 @@ defineProps({
 
   img {
     display: block;
-    object-fit: cover; /* Fill the container without distortion */
+    object-fit: contain; /* Fill the container without distortion */
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 
