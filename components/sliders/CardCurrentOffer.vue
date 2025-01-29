@@ -44,13 +44,14 @@ defineProps({
 .card-content {
   padding: size(10px);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   row-gap: size(6px);
   border-radius: size(8px);
   border: 1px solid $lightGrey;
   cursor: pointer;
   width: 100%;
-  height: 270px;
+  height: 300px;
   overflow: visible;
 }
 .card-image-wrapper {
