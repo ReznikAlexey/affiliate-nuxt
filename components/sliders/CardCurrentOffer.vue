@@ -45,12 +45,15 @@ defineProps({
   padding: size(10px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 calc(25% - 20px);
   row-gap: size(6px);
   border-radius: size(8px);
+  flex: 1 1 calc(25% - 20px);
   border: 1px solid $lightGrey;
   cursor: pointer;
   width: 100%;
-  height: auto;
+  height: 100%; 
   overflow: visible;
 }
 .card-image-wrapper {
