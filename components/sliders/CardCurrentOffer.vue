@@ -58,7 +58,7 @@ defineProps({
 
 .card-image-wrapper {
   width: 100%;
-  aspect-ratio: 4 / 3; /* Maintain image ratio for consistency */
+  padding-top: 66%;
   position: relative;
   border-radius: size(4px);
   overflow: hidden;
