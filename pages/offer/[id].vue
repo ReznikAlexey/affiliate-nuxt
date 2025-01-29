@@ -268,7 +268,7 @@ onMounted(async () => {
     currentOffers.value = await fetchCurrentOfferByIdData(offerId);
 
     // Define the IDs of offers to exclude from points-content
-    const excludedOfferIds = [3, 4]; // Replace with the actual IDs
+    const excludedOfferIds = [3]; // Replace with the actual IDs
 
     // Determine whether to show points-content or external button
     currentOffers.value.showPointsContent = !excludedOfferIds.includes(offerId);
