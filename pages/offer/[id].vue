@@ -182,7 +182,7 @@ const saveToFirebase = async () => {
   try {
     const db = getDatabase();
     if (offerId === 5) {
-      encrypted = CryptoJS.HmacSHA256(`${memberId}`, "affiliate-key").toString(CryptoJS.enc.Hex);
+      encrypted = CryptoJS.AES.encrypt(`${memberId}`, "affiliate-key").ciphertext.toString(CryptoJS.enc.Hex);
       gen_toShopURL = `${currentOffers.value.toShopUrl}/pubref:${encrypted}`;
     } else {
       encrypted = CryptoJS.AES.encrypt(`${memberId}`, "affiliate-key").toString();
