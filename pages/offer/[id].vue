@@ -176,30 +176,16 @@ const isUserCardAuth = computed(() => userStore.getIsUserCardAuth);
 
 const saveToFirebase = async () => {
   let memberId = state.value.number;
-  let offerId = route.params.id; //changes23022025
   try {
     const db = getDatabase();
-    if (offerId === 5) {
-      // Encrypt using SHA-256
-      let encrypted = CryptoJS.SHA256(`${memberId}`).toString(CryptoJS.enc.Hex);
-      console.log(memberId);
-      toShopURL = `${currentOffers.value.toShopUrl}/pubref:${encrypted}`;
-    } else {
-      // Encrypt using AES for other offer IDs
-      let encrypted = CryptoJS.AES.encrypt(`${memberId}`, "affiliate-key").toString();
-      console.log(memberId);
-      toShopURL = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
-    }
-    let encrypted = CryptoJS.AES.encrypt(`${memberId}`, "affiliate-key").toString();
+    let encrypted = CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString();
     console.log(memberId);
-    toShopURL = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
-    
 
-    await push(fireRef(db, "clickLogs/" + offerId), {
+    await push(fireRef(db, "clickLogs/" + route.params.id), {
       encrypted,
       timestamp: moment().format(),
       memberId,
-      toShopURL
+      toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}`
     });
 
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -208,8 +194,6 @@ const saveToFirebase = async () => {
     } else {
       window.open(`${currentOffers.value.toShopUrl}?cid=${encrypted}`, '_blank');
     }
-
-
   } catch (error) {
     console.error("Error adding document: ", error);
   }
