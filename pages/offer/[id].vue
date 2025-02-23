@@ -179,7 +179,7 @@ const saveToFirebase = async () => {
   let offerId = route.params.id; //changes23022025
   try {
     const db = getDatabase();
-    if (offerId === 6) {
+    if (offerId === 5) {
       // Encrypt using SHA-256
       encrypted = CryptoJS.SHA256(`${memberId}`).toString(CryptoJS.enc.Hex);
       toShopURL = `${currentOffers.value.toShopUrl}/pubref:${encrypted}`;
