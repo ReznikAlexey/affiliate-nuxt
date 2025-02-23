@@ -182,13 +182,12 @@ const saveToFirebase = async () => {
   try {
     const db = getDatabase();
     if (offerId === 5) {
-      encrypted = CryptoJS.SHA256(`${memberId}`).toString(CryptoJS.enc.Hex);
+      encrypted = CryptoJS.HmacSHA256(`${memberId}`, cryptoKey).toString(CryptoJS.enc.Hex);
       gen_toShopURL = `${currentOffers.value.toShopUrl}/pubref:${encrypted}`;
     } else {
-      encrypted = CryptoJS.AES.encrypt(`${memberId}`, "affiliate-key").toString();
+      encrypted = CryptoJS.AES.encrypt(`${memberId}`, cryptoKey).toString();
       gen_toShopURL = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
     }
-    console.log(memberId);
 
     await push(fireRef(db, "clickLogs/" + route.params.id), {
       encrypted,
