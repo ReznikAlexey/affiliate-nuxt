@@ -198,12 +198,11 @@ const saveToFirebase = async () => {
       toShopURL
     });
 
-    // Handle Safari browser behavior
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (isSafari) {
-      window.location.href = toShopURL;
+      window.location.href = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
     } else {
-      window.open(toShopURL, "_blank");
+      window.open(`${currentOffers.value.toShopUrl}?cid=${encrypted}`, '_blank');
     }
 
 
