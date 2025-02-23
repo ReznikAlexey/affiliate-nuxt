@@ -176,9 +176,23 @@ const isUserCardAuth = computed(() => userStore.getIsUserCardAuth);
 
 const saveToFirebase = async () => {
   let memberId = state.value.number;
+  let offerId = parseInt(route.params.id);
+
   try {
     const db = getDatabase();
-    let encrypted = CryptoJS.AES.encrypt(`${memberId}`, 'affiliate-key').toString();
+    if (offerId === 5) {
+      // Encrypt using SHA-256
+      encrypted = CryptoJS.SHA256(`${memberId}`).toString(CryptoJS.enc.Hex);
+      toShopURL = `${currentOffers.value.toShopUrl}/pubref:${encrypted}`;
+    } else {
+      // Encrypt using AES for other offer IDs
+      encrypted = CryptoJS.AES.encrypt(`${memberId}`, "affiliate-key").toString();
+      toShopURL = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
+    }
+
+
+
+
     console.log(memberId);
 
     await push(fireRef(db, "clickLogs/" + route.params.id), {
@@ -190,9 +204,9 @@ const saveToFirebase = async () => {
 
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (isSafari) {
-      window.location.href = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
+      window.location.href = toShopURL;
     } else {
-      window.open(`${currentOffers.value.toShopUrl}?cid=${encrypted}`, '_blank');
+      window.open(toShopURL, '_blank');
     }
   } catch (error) {
     console.error("Error adding document: ", error);
