@@ -177,36 +177,31 @@ const isUserCardAuth = computed(() => userStore.getIsUserCardAuth);
 const saveToFirebase = async () => {
   let memberId = state.value.number;
   let offerId = parseInt(route.params.id);
+  let encrypted, gen_toShopURL;
 
   try {
     const db = getDatabase();
     if (offerId === 5) {
-      // Encrypt using SHA-256
       encrypted = CryptoJS.SHA256(`${memberId}`).toString(CryptoJS.enc.Hex);
-      toShopURL = `${currentOffers.value.toShopUrl}/pubref:${encrypted}`;
+      gen_toShopURL = `${currentOffers.value.toShopUrl}/pubref:${encrypted}`;
     } else {
-      // Encrypt using AES for other offer IDs
       encrypted = CryptoJS.AES.encrypt(`${memberId}`, "affiliate-key").toString();
-      toShopURL = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
+      gen_toShopURL = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
     }
-
-
-
-
     console.log(memberId);
 
     await push(fireRef(db, "clickLogs/" + route.params.id), {
       encrypted,
       timestamp: moment().format(),
       memberId,
-      toShopURL: `${currentOffers.value.toShopUrl}?cid=${encrypted}`
+      gen_toShopURL
     });
 
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (isSafari) {
-      window.location.href = toShopURL;
+      window.location.href = gen_toShopURL;
     } else {
-      window.open(toShopURL, '_blank');
+      window.open(gen_toShopURL, '_blank');
     }
   } catch (error) {
     console.error("Error adding document: ", error);
