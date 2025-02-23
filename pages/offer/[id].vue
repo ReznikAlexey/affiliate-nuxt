@@ -190,7 +190,9 @@ const saveToFirebase = async () => {
       console.log(memberId);
       toShopURL = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
     }
-
+    let encrypted = CryptoJS.AES.encrypt(`${memberId}`, "affiliate-key").toString();
+    console.log(memberId);
+    toShopURL = `${currentOffers.value.toShopUrl}?cid=${encrypted}`;
     
 
     await push(fireRef(db, "clickLogs/" + offerId), {
