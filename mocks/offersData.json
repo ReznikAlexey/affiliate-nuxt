@@ -114,21 +114,21 @@
     "id": 5,
     "image": "/iherbbanner.png",
     "detail_text": {
-      "kz": "IHerb.kz сайтынан денсаулық пен сұлулық тауарларын сатып алып, ұшақ мильдерін жинаңыз<br><br>Өзіңіздің денсаулығыңыз бен сұлулығыңызға қамқорлық жасап, сонымен қатар бонустық мильдер жинаңыз. Енді жиі ұшатын жолаушылар iHerb.kz сайтында сауда жасағанда ұпайлар жинай алады.<br><br>iHerb.kz ұсынатын тауарлар арасында дәрумендер, биоқосымшалар, тері күтімі өнімдері, табиғи тағамдар, спорттық тамақтану және экологиялық таза косметика бар – сіздің салауатты өмір салтыңыз үшін қажетті барлық өнімдер.<br><br><b>Әр 250 KZT жұмсаған сайын 1 ұпай аласыз</b> – осылайша келесі саяхатыңызға бір қадам жақындайсыз.<br><br>Күнделікті денсаулық пен сұлулыққа арналған сатып алуларыңызды ұпайларға айналдырыңыз. <b>iHerb.kz сайтынан бүгін-ақ сатып алып, ұпай жинауды бастаңыз.</b>",
-      "ru": "Зарабатывайте баллы, покупая товары для здоровья и красоты на iHerb.kz<br><br>Заботьтесь о своем здоровье и красоте, получая бонусные баллы за покупки. Теперь участники бонусной программы для часто летающих пассажиров Nomad Club могут зарабатывать баллы при покупках на iHerb.kz.<br><br>В каталоге iHerb.kz представлены витамины, биодобавки, уходовая косметика, органические продукты, спортивное питание и экологичные бьюти-средства – все, что необходимо для заботы о себе и своем благополучии.<br><br><b>За каждые 250 KZT, потраченные на iHerb.kz, вы получите 1 балл!</b><br><br><b>Преобразуйте повседневные покупки в новые путешествия.</b>",
-      "en": "Earn Nomad Club Points While Shopping for Health, Beauty & Wellness at iHerb.kz!<br><br>Take care of your health and beauty while earning rewards for your next trip. Frequent flyer members can now earn points every time they shop at iHerb.kz, a trusted destination for high-quality wellness products.<br><br>With a wide selection of vitamins, supplements, skincare, organic snacks, sports nutrition, and eco-friendly beauty essentials, iHerb.kz makes it easy to find everything you need for a healthy lifestyle.<br><br><b>For every 250 KZT spent, you will receive 1 frequent flyer point!</b><br><br><b>Turn your everyday health and beauty purchases into travel rewards. Start shopping and earning points today at iHerb.kz.</b>"
+      "kz": "Өзіңіздің денсаулығыңыз бен сұлулығыңызға күтім жасай отырып, <b>Nomad ұпайларын</b> жинаңыз. Енді <b>Nomad Club</b> қатысушылары <b>nomadclubshop.com</b> сайты арқылы <b>iHerb.kz</b> сайтында сауда жасағанда ұпайлар жинай алады.<br><br><b>iHerb.kz</b> ұсынатын тауарлар арасында дәрумендер, биоқосымшалар, тері күтімі өнімдері, табиғи тағамдар, спорттық тамақтану және экологиялық таза косметика бар – сіздің салауатты өмір салтыңыз үшін қажетті барлық өнімдер.<br><br><b>Әр жұмсаған 250 теңге сайын 1 ұпай аласыз – осылайша келесі саяхатыңызға бір қадам жақындайсыз.</b>",
+      "ru": "Заботьтесь о своем здоровье и красоте, получая <b>Nomad баллы</b> за покупки. Теперь участники программы <b>Nomad Club</b> могут зарабатывать баллы при заказах на <b>iHerb.kz</b> через сайт <b>nomadclubshop.com</b>.<br><br>В каталоге <b>iHerb.kz</b> представлены витамины, биодобавки, уходовая косметика, органические продукты, спортивное питание и экологичные бьюти-средства — все, что нужно для заботы о себе и своем благополучии.<br><br><b>За каждые 250 тенге, потраченные на iHerb.kz, вы получите 1 Nomad балл!</b>",
+      "en": "Take care of your health and beauty while earning rewards for your next trip! Nomad Club members can now earn points every time they shop at <b>iHerb.kz</b> via <b>nomadclubshop.com</b>, a trusted destination for high-quality wellness products.<br><br>With a wide selection of vitamins, supplements, skincare, organic snacks, sports nutrition, and eco-friendly beauty essentials, <b>iHerb.kz</b> makes it easy to find everything you need for a healthy lifestyle.<br><br><b>Earn 1 Nomad point for every 250 tenge spent on iHerb.kz!</b>"
     },
     "preview_text": {
       "kz": "IHerb.kz сайтынан денсаулық пен сұлулық тауарларын сатып алып, ұшақ мильдерін жинаңыз.",
       "ru": "Зарабатывайте баллы, покупая товары для здоровья и красоты на iHerb.kz.",
-      "en": "Earn Nomad Club Points While Shopping for Health, Beauty & Wellness at iHerb.kz!"
+      "en": "Earn Nomad Points While Shopping for Health & Beauty at iHerb.kz!"
     },
     "bonus_step": [
-      "bannerText.banner1.bonusStep1",
-      "bannerText.banner1.bonusStep2",
-      "bannerText.banner1.bonusStep3",
-      "bannerText.banner1.bonusStep4",
-      "bannerText.banner1.bonusStep5"
+      "bannerText.banner6.bonusStep1",
+      "bannerText.banner6.bonusStep2",
+      "bannerText.banner6.bonusStep3",
+      "bannerText.banner6.bonusStep4",
+      "bannerText.banner6.bonusStep5"
     ],
     "title": "bannerText.banner6.title",
     "size": "big",

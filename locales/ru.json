@@ -64,7 +64,12 @@
     },
     "banner6": {
       "title": "Зарабатывайте баллы, покупая товары для здоровья и красоты на iHerb.kz",
-      "detailText": ""
+      "detailText": "",
+      "bonusStep1": "Введите ваш номер участника Nomad Club.",
+      "bonusStep2": "Перейдите в магазин-партнер.",
+      "bonusStep3": "Разрешите использование файлов cookie.",
+      "bonusStep4": "Совершите покупку на веб-сайте партнера.",
+      "bonusStep5": "Баллы будут начислены на ваш счет Nomad Club."
     }
   },
   "termsAndConditions": "Условия и положения Nomad Club Shop",

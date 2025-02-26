@@ -65,8 +65,13 @@
       "detailText":""
     },
     "banner6": {
-      "title": "Earn Nomad Club Points While Shopping for Health, Beauty & Wellness at iHerb.kz!",
-      "detailText": ""
+      "title": "Earn Nomad Points While Shopping for Health & Beauty at iHerb.kz!",
+      "detailText": "",
+      "bonusStep1": "Enter your Nomad Club membership number.",
+      "bonusStep2": "Visit the partner shop.",
+      "bonusStep3": "Enable cookies",
+      "bonusStep4": "Make a purchase on the partner's website.",
+      "bonusStep5": "Points will be credited to your Nomad Club account"
     }
   },
 
