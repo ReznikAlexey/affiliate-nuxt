@@ -76,6 +76,10 @@ export default defineNuxtConfig({
       apiUsername: process.env.VITE_API_USERNAME,
       apiPassword: process.env.VITE_API_PASSWORD,
       apiKey: process.env.VITE_API_KEY,
+      NUXT_SMTP_HOST: process.env.NUXT_SMTP_HOST,
+      NUXT_SMTP_PORT: process.env.NUXT_SMTP_PORT,
+      NUXT_SMTP_USER: process.env.NUXT_SMTP_USER,
+      NUXT_SMTP_PASS: process.env.NUXT_SMTP_PASS
     },
     apiKey: "AIzaSyAbwylvVD25yuMBLU2H7ND49FyXkYfwhZo",
     authDomain: "affiliate-8d45d.firebaseapp.com",
