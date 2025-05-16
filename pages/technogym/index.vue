@@ -19,7 +19,7 @@
       </div>
 
       <div class="button-container">
-        <MainButton type="submit" class="half-width-button">{{ $t('technogym.submit') }}</MainButton>
+        <button type="submit" class="half-width-button">{{ $t('technogym.submit') }}</button>
       </div>
 
       <p v-if="submitted" class="af-text-m" style="color: green; text-align: center; margin-top: 20px;">
