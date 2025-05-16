@@ -10,7 +10,7 @@
           v-model="form.name"
           type="text"
           class="af-input"
-          placeholder="First, Last Name"
+          placeholder="$t('technogym.placeholderName')"
           required
         />
       </div>
