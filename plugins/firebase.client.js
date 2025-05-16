@@ -7,21 +7,14 @@ export default defineNuxtPlugin((nuxtApp) => {
 const config = useRuntimeConfig()
 
 const firebaseConfig = {
-    apiKey: config.apiKey,
-    // apiKey: "AIzaSyAbwylvVD25yuMBLU2H7ND49FyXkYfwhZo",
-    authDomain: config.authDomain,
-    // authDomain: "affiliate-8d45d.firebaseapp.com",
-    projectId: config.projectId,
-    // projectId: "affiliate-8d45d",
-    storageBucket: config.storageBucket,
-    // storageBucket: "affiliate-8d45d.appspot.com",
-    messagingSenderId: config.messagingSenderId,
-    // messagingSenderId: "287584876106",
-    appId: config.appId,
-    // appId: "1:287584876106:web:223b2352f7ff2aaa8b98b3",
-    measurementId: config.measurementId,
-    // measurementId: "G-JTK7MHKWPK",
-    databaseURL: "https://affiliate-8d45d-default-rtdb.asia-southeast1.firebasedatabase.app"
+    apiKey: config.FirebaseapiKey,
+     authDomain: config.authDomain,
+     projectId: config.projectId,
+     storageBucket: config.storageBucket,
+     messagingSenderId: config.messagingSenderId,
+     appId: config.appId,
+     measurementId: config.measurementId,
+     databaseURL: "https://affiliate-8d45d-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
   
     const firebaseApp = initializeApp(firebaseConfig);
