@@ -19,7 +19,7 @@
       </div>
 
       <div class="button-container">
-        <button type="submit" class="half-width-button">{{ $t('technogym.submit') }}</button>
+        <MainButton type="submit" class="half-width-button">{{ $t('technogym.submit') }}</MainButton>
       </div>
 
       <p v-if="submitted" class="af-text-m" style="color: green; text-align: center; margin-top: 20px;">
@@ -33,7 +33,8 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
 const form = ref({ name: '', phone: '', email: '' })
 const submitted = ref(false)
 
@@ -46,25 +47,49 @@ const submitTechnogym = async () => {
     submitted.value = true
     form.value = { name: '', phone: '', email: '' }
   } catch (e) {
-    alert('Error sending message.')
+    alert('Submission failed. Please try again.')
     console.error(e)
   }
 }
 </script>
 
-<style scoped>
-.form-styled {
+<style lang="scss" scoped>
+.offers__card-item {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
 }
 
-.af-input {
-  padding: 12px;
-  font-size: 1rem;
+.offers__card {
+  padding-top: 55%;
+  position: relative;
+  display: block;
+  background-color: transparent;
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: size(10px);
+  overflow: hidden;
+  
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
+
+.offers__card-text-container {
+  padding: size(20px);
+  background: #fff;
+  
+  .af-text-m {
+    font-size: size(18px);
+    line-height: 135%;
+    color: #333;
+  }
+}
+
 </style>
