@@ -83,5 +83,13 @@
   },
   "success": {
     "authorize": "Authorization success"
+  },
+ "technogym": {
+    "title": "Technogym Contact",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "submit": "Submit",
+    "confirmation": "Thank you! Your request has been sent to our sales representative. They will contact you soon."
   }
 }
