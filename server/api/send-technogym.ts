@@ -1,36 +1,40 @@
 import nodemailer from 'nodemailer';
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
   const config = useRuntimeConfig();
+  const body = await readBody(event);
 
   const transporter = nodemailer.createTransport({
-    host: config.NUXT_SMTP_HOST,
+    host: config.smtpHost,
     port: parseInt(config.NUXT_SMTP_PORT),
-    secure: true, // true for 465, false for 587
+    secure: config.NUXT_SMTP_PORT === '465', // true for SSL (465), false for TLS (587)
     auth: {
-      user: config.smtpUser,
-      pass: config.smtpPass,
-    },
+      user: config.NUXT_SMTP_USER,
+      pass: config.NUXT_SMTP_PASS
+    }
   });
 
   const mailOptions = {
-    from: `"Nomad Club Shop" <${config.NUXT_SMTP_USER}>`,
-    to: 'kahennefer@gmail.com', // your destination email
-    subject: 'New Technogym Submission',
+    from: `"NomadClubShop Form" <${config.NUXT_SMTP_USER}>`,
+    to: 'your@email.com', // destination
+    subject: 'New Technogym Form Submission',
     html: `
       <h2>Technogym Form Submission</h2>
       <p><strong>Name:</strong> ${body.name}</p>
       <p><strong>Email:</strong> ${body.email}</p>
-      <p><strong>Message:</strong><br/>${body.message}</p>
+      <p><strong>Message:</strong> ${body.message}</p>
     `
   };
 
   try {
-    await transporter.sendMail(mailOptions);
-    return { status: 'success' };
-  } catch (err) {
-    console.error('Email send error:', err);
-    return { status: 'error', message: 'Email could not be sent' };
+    const info = await transporter.sendMail(mailOptions);
+    return { status: 'success', messageId: info.messageId };
+  } catch (error: any) {
+    console.error('Email send error:', error.message);
+    return {
+      statusCode: 500,
+      message: 'Failed to send email',
+      error: error.message
+    };
   }
 });
