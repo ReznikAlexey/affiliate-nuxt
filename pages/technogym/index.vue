@@ -2,24 +2,47 @@
   <div class="container page-content">
     <h1 class="main-title-m">{{ $t('technogym.title') }}</h1>
 
-    <form @submit.prevent="submitTechnogym" class="af-form">
+    <form @submit.prevent="submitTechnogym" class="form-styled">
       <div class="form-group">
         <label class="af-text-m" for="name">{{ $t('technogym.name') }}</label>
-        <input id="name" v-model="form.name" required />
+        <input
+          id="name"
+          v-model="form.name"
+          type="text"
+          class="af-input"
+          placeholder="First, Last Name"
+          required
+        />
       </div>
 
       <div class="form-group">
         <label class="af-text-m" for="phone">{{ $t('technogym.phone') }}</label>
-        <input id="phone" v-model="form.phone" required />
+        <input
+          id="phone"
+          v-model="form.phone"
+          type="text"
+          class="af-input"
+          placeholder="+7701..."
+          required
+        />
       </div>
 
       <div class="form-group">
         <label class="af-text-m" for="email">{{ $t('technogym.email') }}</label>
-        <input id="email" v-model="form.email" type="email" required />
+        <input
+          id="email"
+          v-model="form.email"
+          type="email"
+          class="af-input"
+          placeholder="you@example.com"
+          required
+        />
       </div>
 
       <div class="button-container">
-        <MainButton type="submit" class="half-width-button">{{ $t('technogym.submit') }}</MainButton>
+        <button type="submit" class="half-width-button">
+          {{ $t('technogym.submit') }}
+        </button>
       </div>
 
       <p v-if="submitted" class="af-text-m" style="color: green; text-align: center; margin-top: 20px;">
@@ -53,43 +76,25 @@ const submitTechnogym = async () => {
 }
 </script>
 
-<style lang="scss" scoped>
-.offers__card-item {
+<style scoped>
+.form-styled {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.offers__card {
-  padding-top: 55%;
-  position: relative;
-  display: block;
-  background-color: transparent;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.af-input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   width: 100%;
-  border-radius: size(10px);
-  overflow: hidden;
-  
-  img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
-
-.offers__card-text-container {
-  padding: size(20px);
-  background: #fff;
-  
-  .af-text-m {
-    font-size: size(18px);
-    line-height: 135%;
-    color: #333;
-  }
-}
-
 </style>
