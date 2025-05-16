@@ -72,15 +72,12 @@ export default defineNuxtConfig({
     preference: 'light'
   },
   runtimeConfig: {
-  
-    apiUsername: process.env.VITE_API_USERNAME,
-    apiPassword: process.env.VITE_API_PASSWORD,
-    apiKey: process.env.VITE_API_KEY,
-    NUXT_SMTP_HOST: process.env.NUXT_SMTP_HOST,
-    NUXT_SMTP_PORT: process.env.NUXT_SMTP_PORT,
-    NUXT_SMTP_USER: process.env.NUXT_SMTP_USER,
-    NUXT_SMTP_PASS: process.env.NUXT_SMTP_PASS,
-
+    public: {
+      apiUsername: process.env.VITE_API_USERNAME,
+      apiPassword: process.env.VITE_API_PASSWORD,
+      apiKey: process.env.VITE_API_KEY
+     
+    },
     FirebaseapiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     projectId: process.env.FIREBASE_PROJECT_ID,
@@ -88,7 +85,12 @@ export default defineNuxtConfig({
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.FIREBASE_APP_ID,
     measurementId: process.env.FIREBASE_MEASUREMENT_ID,
-    cryptoKey: process.env.CRYPTO_KEY
+    cryptoKey: process.env.CRYPTO_KEY,
+    NUXT_SMTP_HOST: process.env.NUXT_SMTP_HOST,
+    NUXT_SMTP_PORT: process.env.NUXT_SMTP_PORT,
+    NUXT_SMTP_USER: process.env.NUXT_SMTP_USER,
+    NUXT_SMTP_PASS: process.env.NUXT_SMTP_PASS
 
+    
   }
 })
