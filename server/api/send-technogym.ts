@@ -1,24 +1,22 @@
-import { defineEventHandler, readBody, useRuntimeConfig } from 'h3'
+import { defineEventHandler, readBody } from 'h3'
 import nodemailer from 'nodemailer'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   const { name, phone, email } = body
 
-  const config = useRuntimeConfig()
-
-  const transporter = nodemailer.createTransport({
-    host: config.NUXT_SMTP_HOST,
-    port: Number(config.NUXT_SMTP_PORT),
-    secure: false,
-    auth: {
-      user: config.NUXT_SMTP_USER,
-      pass: config.NUXT_SMTP_PASS
-    }
-  })
+const transporter = nodemailer.createTransport({
+  host: process.env.NUXT_SMTP_HOST,
+  port: Number(process.env.NUXT_SMTP_PORT),
+  secure: false,
+  auth: {
+    user: process.env.NUXT_SMTP_USER,
+    pass: process.env.NUXT_SMTP_PASS
+  }
+})
 
   await transporter.sendMail({
-    from: `"Technogym Form" <${config.NUXT_SMTP_USER}>`,
+    from: `"Technogym Form" <your@email.com>`,
     to: 'technogym@nomadclubshop.com',
     subject: 'New Technogym Inquiry',
     html: `
