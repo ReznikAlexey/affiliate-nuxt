@@ -2,23 +2,25 @@
   <div class="container page-content">
     <h1 class="main-title-m">{{ $t('technogym.title') }}</h1>
 
-    <form @submit.prevent="submitTechnogym" class="form-styled">
+    <form @submit.prevent="submitTechnogym" class="af-form">
       <div class="form-group">
         <label class="af-text-m" for="name">{{ $t('technogym.name') }}</label>
-        <input id="name" v-model="form.name" type="text" class="af-input" required />
+        <input id="name" v-model="form.name" required />
       </div>
 
       <div class="form-group">
         <label class="af-text-m" for="phone">{{ $t('technogym.phone') }}</label>
-        <input id="phone" v-model="form.phone" type="text" class="af-input" required />
+        <input id="phone" v-model="form.phone" required />
       </div>
 
       <div class="form-group">
         <label class="af-text-m" for="email">{{ $t('technogym.email') }}</label>
-        <input id="email" v-model="form.email" type="email" class="af-input" required />
+        <input id="email" v-model="form.email" type="email" required />
       </div>
 
-      <button type="submit" class="half-width-button">{{ $t('technogym.submit') }}</button>
+      <div class="button-container">
+        <button type="submit" class="half-width-button">{{ $t('technogym.submit') }}</button>
+      </div>
 
       <p v-if="submitted" class="af-text-m" style="color: green; text-align: center; margin-top: 20px;">
         {{ $t('technogym.confirmation') }}
