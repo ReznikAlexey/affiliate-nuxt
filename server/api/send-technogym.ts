@@ -2,15 +2,14 @@ import { defineEventHandler, readBody, useRuntimeConfig } from 'h3'
 import nodemailer from 'nodemailer'
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
   const body = await readBody(event)
   const { name, phone, email } = body
-
-  const config = useRuntimeConfig()
 
   const transporter = nodemailer.createTransport({
     host: config.NUXT_SMTP_HOST,
     port: Number(config.NUXT_SMTP_PORT),
-    secure: false,
+    secure: true, // set to true if using port 465
     auth: {
       user: config.NUXT_SMTP_USER,
       pass: config.NUXT_SMTP_PASS
