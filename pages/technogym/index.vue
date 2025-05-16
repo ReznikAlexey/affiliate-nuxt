@@ -19,16 +19,7 @@
       </div>
 
       <div class="button-container">
-        <button type="submit" class="half-width-button">{{ $t('technogym.submit') }}</button>
-      </div>
-
-      <div class="button-container">
-          <MainButton
-            type="button"
-            :text="$t('main.learnMore')"
-            @click="openExternalLink(currentOffers.externalUrl)"
-            class="half-width-button"
-            />
+        <MainButton type="submit" class="half-width-button">{{ $t('technogym.submit') }}</MainButton>
       </div>
 
       <p v-if="submitted" class="af-text-m" style="color: green; text-align: center; margin-top: 20px;">
