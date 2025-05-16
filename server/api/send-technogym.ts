@@ -1,31 +1,36 @@
-import { defineEventHandler, readBody } from 'h3'
-import nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer';
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event)
-  const { name, phone, email } = body
+  const body = await readBody(event);
+  const config = useRuntimeConfig();
 
-const transporter = nodemailer.createTransport({
-  host: process.env.NUXT_SMTP_HOST,
-  port: Number(process.env.NUXT_SMTP_PORT),
-  secure: false,
-  auth: {
-    user: process.env.NUXT_SMTP_USER,
-    pass: process.env.NUXT_SMTP_PASS
-  }
-})
+  const transporter = nodemailer.createTransport({
+    host: config.NUXT_SMTP_HOST,
+    port: parseInt(config.NUXT_SMTP_PORT),
+    secure: true, // true for 465, false for 587
+    auth: {
+      user: config.smtpUser,
+      pass: config.smtpPass,
+    },
+  });
 
-  await transporter.sendMail({
-    from: `"Technogym Form" <your@email.com>`,
-    to: 'technogym@nomadclubshop.com',
-    subject: 'New Technogym Inquiry',
+  const mailOptions = {
+    from: `"Nomad Club Shop" <${config.NUXT_SMTP_USER}>`,
+    to: 'kahennefer@gmail.com', // your destination email
+    subject: 'New Technogym Submission',
     html: `
-      <h3>New Technogym Form Submission</h3>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Email:</strong> ${email}</p>
+      <h2>Technogym Form Submission</h2>
+      <p><strong>Name:</strong> ${body.name}</p>
+      <p><strong>Email:</strong> ${body.email}</p>
+      <p><strong>Message:</strong><br/>${body.message}</p>
     `
-  })
+  };
 
-  return { status: 'ok' }
-})
+  try {
+    await transporter.sendMail(mailOptions);
+    return { status: 'success' };
+  } catch (err) {
+    console.error('Email send error:', err);
+    return { status: 'error', message: 'Email could not be sent' };
+  }
+});
